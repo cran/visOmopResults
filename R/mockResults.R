@@ -1,4 +1,5 @@
-#' A summarised_result mock object.
+#' A summarised_result object filled with mock data
+#'
 #' @return An object of the class summarised_result with mock data.
 #' @description Creates an object of the class summarised_result with mock data
 #' for illustration purposes.
@@ -14,18 +15,18 @@ mockSummarisedResult <- function() {
   # number subjects
   dplyr::tibble(
     "cdm_name" = "mock",
-    "result_type" = NA_character_,
+    "result_type" = "mock_summarised_result",
     "package_name" = "visOmopResults",
     "package_version" = utils::packageVersion("visOmopResults") |>
       as.character(),
     "group_name" = "cohort_name",
     "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
     "strata_name" = rep(c(
-      "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+      "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
     ), 2),
     "strata_level" = rep(c(
-      "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-      ">=40 and Female", "Male", "Female", "<40", ">=40"
+      "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+      ">=40 &&& Female", "Male", "Female", "<40", ">=40"
     ), 2),
     "variable_name" = "number subjects",
     "variable_level" = NA_character_,
@@ -39,18 +40,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "age",
         "variable_level" = NA_character_,
@@ -65,18 +66,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "age",
         "variable_level" = NA_character_,
@@ -91,18 +92,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "Medications",
         "variable_level" = "Amoxiciline",
@@ -117,18 +118,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "Medications",
         "variable_level" = "Amoxiciline",
@@ -143,18 +144,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "Medications",
         "variable_level" = "Ibuprofen",
@@ -169,18 +170,18 @@ mockSummarisedResult <- function() {
     dplyr::union_all(
       dplyr::tibble(
         "cdm_name" = "mock",
-        "result_type" = NA_character_,
+        "result_type" = "mock_summarised_result",
         "package_name" = "visOmopResults",
         "package_version" = utils::packageVersion("visOmopResults") |>
           as.character(),
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "Medications",
         "variable_level" = "Ibuprofen",
@@ -191,5 +192,27 @@ mockSummarisedResult <- function() {
         "additional_level" = "overall"
       )
     ) |>
+    # # settings
+    # dplyr::union_all(
+    #   dplyr::tibble(
+    #     "cdm_name" = "mock",
+    #     "result_type" = "mock_summarised_result",
+    #     "package_name" = "visOmopResults",
+    #     "package_version" = utils::packageVersion("visOmopResults") |>
+    #       as.character(),
+    #     "group_name" = "overall",
+    #     "group_level" = "overall",
+    #     "strata_name" = "overall",
+    #     "strata_level" = "overall",
+    #     "variable_name" = "settings",
+    #     "variable_level" = NA_character_,
+    #     "estimate_name" = "mock_default",
+    #     "estimate_type" = "logical",
+    #     "estimate_value" = "TRUE",
+    #     "additional_name" = "overall",
+    #     "additional_level" = "overall"
+    #   )
+    # ) |>
+    dplyr::mutate(result_id = as.integer(1)) |>
     omopgenerics::newSummarisedResult()
 }

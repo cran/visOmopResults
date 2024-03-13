@@ -2,25 +2,35 @@
 % Please edit documentation in R/split.R
 \name{splitAll}
 \alias{splitAll}
-\title{Split group, strata and additional into their respective columns.}
+\title{Split group, strata and additional at once.}
 \usage{
-splitAll(result)
+splitAll(
+  result,
+  keep = FALSE,
+  fill = "overall",
+  overall = lifecycle::deprecated()
+)
 }
 \arguments{
-\item{result}{Omop result object (summarised_result or compared_result).}
+\item{result}{A summarised_result object.}
+
+\item{keep}{Whether to keep the original group_name and group_level columns.}
+
+\item{fill}{Optionally, a character that specifies what value should be
+filled in with when missing.}
+
+\item{overall}{deprecated.}
 }
 \value{
 A dataframe with group, strata and additional name as columns.
 }
 \description{
 Pivots the input dataframe so group, strata and additional name columns are
-tranformed into column names with values from the corresponding level columns
-(group, strata, and additional).
+transformed into columns that contain values from the corresponding level
+columns (group, strata, and additional).
 }
 \examples{
-\donttest{
 mockSummarisedResult() |>
   splitAll()
-}
 
 }

@@ -2,14 +2,14 @@
 % Please edit documentation in R/columns.R
 \name{groupColumns}
 \alias{groupColumns}
-\title{Identify group columns in an omop result object.}
+\title{Identify group columns in an omop result object}
 \usage{
-groupColumns(result, overall = FALSE)
+groupColumns(result, overall = lifecycle::deprecated())
 }
 \arguments{
-\item{result}{An omop result object.}
+\item{result}{A summarised_result.}
 
-\item{overall}{Whether to keep overall column if present.}
+\item{overall}{deprecated.}
 }
 \value{
 Unique values of the group name column.

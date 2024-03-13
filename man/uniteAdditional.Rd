@@ -2,23 +2,26 @@
 % Please edit documentation in R/unite.R
 \name{uniteAdditional}
 \alias{uniteAdditional}
-\title{Unite one or more columns in additional_name-additional_level format.}
+\title{Unite one or more columns in additional_name-additional_level format}
 \usage{
-uniteAdditional(x, cols)
+uniteAdditional(x, cols, keep = FALSE, ignore = c(NA, "overall"))
 }
 \arguments{
-\item{x}{Tibble or data.frame.}
+\item{x}{Tibble or dataframe.}
 
 \item{cols}{Columns to aggregate.}
+
+\item{keep}{Whether to keep the original columns.}
+
+\item{ignore}{Level values to ignore.}
 }
 \value{
-A Tibble with the new columns.
+A tibble with the new columns.
 }
 \description{
-Unite one or more columns in additional_name-additional_level format.
+Unites targeted table columns into additional_name-additional_level columns.
 }
 \examples{
-\donttest{
 x <- dplyr::tibble(
   variable = "number subjects",
   value = c(10, 15, 40, 78),
@@ -26,10 +29,7 @@ x <- dplyr::tibble(
   age_group = c("<40", ">40", ">40", "<40")
 )
 
-x
-
 x |>
   uniteAdditional(c("sex", "age_group"))
-}
 
 }

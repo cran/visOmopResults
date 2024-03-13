@@ -1,8 +1,9 @@
 test_that("gtTable", {
 
   table_to_format <- mockSummarisedResult() |>
-    formatTable(header = c("Study cohorts", "group_level", "Study strata", "strata_name", "strata_level"),
-               includeHeaderName = FALSE)
+    formatHeader(header = c("Study cohorts", "group_level", "Study strata", "strata_name", "strata_level"),
+               includeHeaderName = FALSE) |>
+    dplyr::select(-result_id)
   # Input 1 ----
   # Title but no subtitle
   # Styles
@@ -32,7 +33,7 @@ test_that("gtTable", {
   # Spanners
   expect_equal(
     gtResult$`_spanners`$spanner_label |> unlist(),
-    c("overall", "age_group and sex", "sex", "age_group", "overall", "age_group and sex",
+    c("overall", "age_group &&& sex", "sex", "age_group", "overall", "age_group &&& sex",
       "sex", "age_group", "Study strata", "cohort1", "cohort2", "Study cohorts")
   )
   expect_true(sum(gtResult$`_spanners`$spanner_level == 1) == 8)
@@ -65,8 +66,9 @@ test_that("gtTable", {
   table_to_format <- mockSummarisedResult() |>
     formatEstimateName(estimateNameFormat = c("N (%)" = "<count> (<percentage>%)",
                                   "N" = "<count>")) |>
-    formatTable(header = c("strata_name", "strata_level"),
-               includeHeaderName = TRUE)
+    formatHeader(header = c("strata_name", "strata_level"),
+               includeHeaderName = TRUE) |>
+    dplyr::select(-result_id)
   gtResult <- gtTable(
     table_to_format,
     style = list(
@@ -88,7 +90,7 @@ test_that("gtTable", {
   # Spanners
   expect_equal(
     gtResult$`_spanners`$spanner_label |> unlist(),
-    c("strata_level", "overall", "age_group and sex", "sex", "age_group", "strata_name")
+    c("strata_level", "overall", "age_group &&& sex", "sex", "age_group", "strata_name")
   )
   expect_true(sum(gtResult$`_spanners`$spanner_level == 1) == 1)
   expect_true(sum(gtResult$`_spanners`$spanner_level == 2) == 4)
@@ -99,7 +101,7 @@ test_that("gtTable", {
                c("#000000", "#FFFFFF"))
   expect_true(is.null(gtResult$`_styles`$styles[gtResult$`_styles`$grpname %in% gtResult$`_spanners`$spanner_id[gtResult$`_spanners`$spanner_level == 2]] |>
                  unlist() |> unique()))
-  # title and subtitle
+  # title &&& subtitle
   expect_true(gtResult$`_heading`$title == "Title test 2")
   expect_true(gtResult$`_heading`$subtitle == "Subtitle for test 2")
   expect_true(is.null(gtResult$`_styles`$styles[gtResult$`_styles`$locname == "title"] |> unlist()))
@@ -109,7 +111,7 @@ test_that("gtTable", {
   expect_true(length(gtResult$`_styles`$styles[gtResult$`_styles`$locname == "columns_columns"] |> unlist()) == 11)
   expect_false(lapply(gtResult$`_boxhead`$column_label, function(x){grepl("\\[header\\]|\\[header_name\\]", x)}) |> unlist() |> unique())
   # na
-  expect_false(is.null(gtResult$`_substitutions`[[1]]$func$default))
+  expect_equal(unique(gtResult$`_data`$variable_level[1:3]), "-")
   # Group labels
   expect_equal(gtResult$`_stub_df`$group_label |> unlist() |> unique(), c("cohort1", "cohort2"))
   expect_false(gtResult$`_options`$value[gtResult$`_options`$parameter == "row_group_as_column"] |> unlist())
@@ -128,9 +130,10 @@ test_that("gtTable", {
   table_to_format <- mockSummarisedResult() |>
     formatEstimateName(estimateNameFormat = c("N (%)" = "<count> (<percentage>%)",
                                   "N" = "<count>")) |>
-    formatTable(header = c("strata_name", "strata_level"),
+    formatHeader(header = c("strata_name", "strata_level"),
                delim = ":",
-               includeHeaderName = TRUE)
+               includeHeaderName = TRUE) |>
+    dplyr::select(-result_id)
   gtResult <- gtTable(
     table_to_format,
     delim = ":",
@@ -169,8 +172,9 @@ test_that("gtTable", {
 
 test_that("gtTable, test default styles and NULL", {
   table_to_format <- mockSummarisedResult() |>
-    formatTable(header = c("Study cohorts", "group_level", "Study strata", "strata_name", "strata_level"),
-                includeHeaderName = FALSE)
+    formatHeader(header = c("Study cohorts", "group_level", "Study strata", "strata_name", "strata_level"),
+                includeHeaderName = FALSE) |>
+    dplyr::select(-result_id)
   # Input 1: NULL ----
   gtResult <- gtTable(
     table_to_format,
@@ -190,9 +194,10 @@ test_that("gtTable, test default styles and NULL", {
 
   # Input 2 ----
   table_to_format <- mockSummarisedResult() |>
+    dplyr::select(-result_id) |>
     formatEstimateName(estimateNameFormat = c("N (%)" = "<count> (<percentage>%)",
                                               "N" = "<count>")) |>
-    formatTable(header = c("strata", "strata_name", "strata_level"),
+    formatHeader(header = c("strata", "strata_name", "strata_level"),
                 includeHeaderName = TRUE)
   gtResult <- gtTable(
     table_to_format,
@@ -251,7 +256,8 @@ test_that("gtTable, test default styles and NULL", {
 })
 test_that("gtTable, test colsToMergeRows", {
   table_to_format<- mockSummarisedResult() |>
-    formatTable(header = c("strata_name", "strata_level"))
+    formatHeader(header = c("strata_name", "strata_level")) |>
+    dplyr::select(-result_id)
   # colsToMergeRows = "all"
   gtResult <- gtTable(
     table_to_format,
@@ -268,9 +274,9 @@ test_that("gtTable, test colsToMergeRows", {
   expect_equal(gtResult$`_data`$cdm_name,
                c("mock", "", "", "", "", "", "", "mock", "", "", "", "", "", ""))
   expect_equal(gtResult$`_data`$result_type,
-               c(NA_character_, "", "", "", "", "", "", NA_character_, "", "", "", "", "", ""))
+               c("mock_summarised_result", "", "", "", "", "", "", "mock_summarised_result", "", "", "", "", "", ""))
   expect_equal(gtResult$`_data`$variable_level,
-               c(NA_character_, NA_character_, "", "Amoxiciline", "", "Ibuprofen", "", NA_character_, NA_character_, "", "Amoxiciline",
+               c("-", "-", "", "Amoxiciline", "", "Ibuprofen", "", "-", "-", "", "Amoxiciline",
                  "","Ibuprofen",  ""  ))
   expect_equal(gtResult$`_data`$group_level|> levels(),
                c("cohort1", "cohort2"))
@@ -291,9 +297,9 @@ test_that("gtTable, test colsToMergeRows", {
   expect_equal(gtResult$`_data`$cdm_name,
                c("mock", "", "", "", "", "", "", "mock", "", "", "", "", "", ""))
   expect_equal(gtResult$`_data`$result_type,
-               rep(NA_character_, 14))
+               rep("mock_summarised_result", 14))
   expect_equal(gtResult$`_data`$variable_level,
-               c(NA_character_, "", "", "Amoxiciline", "", "Ibuprofen", "", NA_character_, "", "", "Amoxiciline",
+               c("-", "", "", "Amoxiciline", "", "Ibuprofen", "", "-", "", "", "Amoxiciline",
                  "","Ibuprofen",  ""  ))
   expect_equal(gtResult$`_data`$group_level|> levels(),
                c("cohort1", "cohort2"))
@@ -314,9 +320,9 @@ test_that("gtTable, test colsToMergeRows", {
   expect_equal(gtResult$`_data`$cdm_name,
                c("mock", "", "", "", "", "", "", "", "", "", "", "", "", ""))
   expect_equal(gtResult$`_data`$result_type,
-               c(NA_character_, "", "", "", "", "", "", "", "", "", "", "", "", ""))
+               c("mock_summarised_result", "", "", "", "", "", "", "", "", "", "", "", "", ""))
   expect_equal(gtResult$`_data`$variable_level,
-               c(NA_character_, NA_character_, NA_character_, NA_character_, NA_character_, NA_character_,
+               c("-", "-", "-", "-", "-", "-",
                  "Amoxiciline", "Amoxiciline", "Amoxiciline", "Amoxiciline", "Ibuprofen", "Ibuprofen",
                  "Ibuprofen","Ibuprofen"))
   expect_null(gtResult$`_data`$group_level|> levels())

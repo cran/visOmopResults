@@ -6,8 +6,7 @@ test_that("formatEstimateName", {
   result_output <-  formatEstimateName(result,
                                        estimateNameFormat = c("N (%)" = "<count> (<percentage>%)",
                                                   "N" = "<count>"),
-                                       keepNotFormatted = TRUE)|>
-    dplyr::mutate(id = dplyr::row_number())
+                                       keepNotFormatted = TRUE)
   # check count as "N"
   expect_identical(unique(result_output$estimate_name[result_output$variable_name == "number subjects"]),
                    "N")
@@ -52,7 +51,7 @@ test_that("formatEstimateName", {
   expect_identical(unique(result_output$estimate_name[result_output$variable_name == "age"]),
                    "mean (sd)")
   # check estimates
-  row_vars <- dplyr::tibble(group_level = "cohort2", strata_name = "age_group and sex", strata_level = "<40 and Male")
+  row_vars <- dplyr::tibble(group_level = "cohort2", strata_name = "age_group &&& sex", strata_level = "<40 &&& Male")
   estimates_out <- result_output |> dplyr::inner_join(row_vars, by = colnames(row_vars))
   estimates_in  <- result |> dplyr::inner_join(row_vars, by = colnames(row_vars))
   ## mean
@@ -95,8 +94,9 @@ test_that("formatEstimateName", {
   expect_identical(estimates_out$estimate_value[estimates_out$variable_name == "number subjects"],
                    paste0(estimates_in$estimate_value[estimates_in$variable_name == "number subjects"]))
 
+  expect_no_error(result |> dplyr::select(-"cdm_name") |> formatEstimateName())
   # Wrong input ----
-  expect_error(result |> dplyr::select(-"cdm_name") |> formatEstimateName())
+  expect_error(result |> dplyr::select(-"estimate_name") |> formatEstimateName())
   expect_error(formatEstimateName(result,
                                   estimateNameFormat = c("N" = "count",
                                                          "N (%)" = "count (percentage%)"),
@@ -128,11 +128,11 @@ test_that("formatEstimateName, useFormatOrder", {
       "group_name" = "cohort_name",
       "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
       "strata_name" = rep(c(
-        "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+        "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
       ), 2),
       "strata_level" = rep(c(
-        "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-        ">=40 and Female", "Male", "Female", "<40", ">=40"
+        "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+        ">=40 &&& Female", "Male", "Female", "<40", ">=40"
       ), 2),
       "variable_name" = "age",
       "variable_level" = NA_character_,
@@ -153,11 +153,11 @@ test_that("formatEstimateName, useFormatOrder", {
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "age",
         "variable_level" = NA_character_,
@@ -179,11 +179,11 @@ test_that("formatEstimateName, useFormatOrder", {
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "age",
         "variable_level" = NA_character_,
@@ -205,11 +205,11 @@ test_that("formatEstimateName, useFormatOrder", {
         "group_name" = "cohort_name",
         "group_level" = c(rep("cohort1", 9), rep("cohort2", 9)),
         "strata_name" = rep(c(
-          "overall", rep("age_group and sex", 4), rep("sex", 2), rep("age_group", 2)
+          "overall", rep("age_group &&& sex", 4), rep("sex", 2), rep("age_group", 2)
         ), 2),
         "strata_level" = rep(c(
-          "overall", "<40 and Male", ">=40 and Male", "<40 and Female",
-          ">=40 and Female", "Male", "Female", "<40", ">=40"
+          "overall", "<40 &&& Male", ">=40 &&& Male", "<40 &&& Female",
+          ">=40 &&& Female", "Male", "Female", "<40", ">=40"
         ), 2),
         "variable_name" = "age",
         "variable_level" = NA_character_,
@@ -220,6 +220,7 @@ test_that("formatEstimateName, useFormatOrder", {
         "additional_level" = "overall"
       )
     ) |>
+    dplyr::mutate(result_id = "1") |>
     omopgenerics::newSummarisedResult()
 
   # FALSE ----
@@ -250,4 +251,22 @@ test_that("formatEstimateName, useFormatOrder", {
   expect_false(any(which(result_output$estimate_name %in% "number subjets") <
                     which(result_output$estimate_name %in% "range")))
 
+})
+
+test_that("empty format",{
+  result <- mockSummarisedResult()
+  expect_no_error(res0 <- formatEstimateName(
+    result,
+    estimateNameFormat = character(0),
+    keepNotFormatted = TRUE,
+    useFormatOrder = TRUE)
+  )
+  expect_true(res0 |> dplyr::anti_join(result, by = colnames(res0)) |> nrow() == 0)
+  expect_no_error(res1 <- formatEstimateName(
+    result,
+    estimateNameFormat = NULL,
+    keepNotFormatted = TRUE,
+    useFormatOrder = TRUE)
+  )
+  expect_identical(res1, result)
 })
