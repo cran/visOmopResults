@@ -110,3 +110,28 @@ mock_sr |>
     colsToMergeRows = "all_columns"
   )
 
+## -----------------------------------------------------------------------------
+mock_sr2 <- mockSummarisedResult()
+
+## -----------------------------------------------------------------------------
+mock_sr2 |> formatTable(
+  formatEstimateName = c("N%" = "<count> (<percentage>)",
+                         "N" = "<count>",
+                         "Mean (SD)" = "<mean> (<sd>)"),
+  header = c("Stratifications", "strata"),
+  split = c("group","additional")
+)
+
+## -----------------------------------------------------------------------------
+mock_sr2 |> formatTable(
+  formatEstimateName = c("N%" = "<count> (<percentage>)",
+                         "N" = "<count>",
+                         "Mean (SD)" = "<mean> (<sd>)"),
+  header = c("Stratifications", "strata"),
+  split = c("group","additional"),
+  groupColumn = "cohort_name"
+)
+
+## -----------------------------------------------------------------------------
+optionsFormatTable()
+
