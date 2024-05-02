@@ -24,20 +24,12 @@ result |>
   glimpse()
 
 ## -----------------------------------------------------------------------------
-mockSummarisedResult(settings = TRUE) |>
-  pivotSettings() |>
+mockSummarisedResult() |>
+  addSettings() |>
   glimpse()
 
 ## -----------------------------------------------------------------------------
-table <- mockSummarisedResult() |>
-  mutate(mockSummarisedResult = TRUE, vignette = "tidy")
-
-result <- table |> appendSettings(colsSettings = c("mockSummarisedResult", "vignette"))
-
-result |> filter(variable_name == "settings") |> glimpse()
-
-## -----------------------------------------------------------------------------
-result <- mockSummarisedResult(settings = TRUE)
+result <- mockSummarisedResult()
 
 result |> 
   tidy() |> 

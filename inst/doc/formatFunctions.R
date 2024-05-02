@@ -55,9 +55,10 @@ mock_sr |> glimpse()
 # first we select the columns we want:
 mock_sr <- mock_sr |>
   splitGroup() |>
-  select(!all_of(c("cdm_name", "result_type", "package_name", 
-                                 "package_version", "estimate_type", "result_id",
-                                 "additional_name", "additional_level"))) 
+  select(!all_of(c(
+    "cdm_name", "estimate_type", "result_id","additional_name", 
+    "additional_level"
+  ))) 
 mock_sr |>  gtTable()
 
 ## -----------------------------------------------------------------------------
@@ -114,7 +115,7 @@ mock_sr |>
 mock_sr2 <- mockSummarisedResult()
 
 ## -----------------------------------------------------------------------------
-mock_sr2 |> formatTable(
+mock_sr2 |> visOmopTable(
   formatEstimateName = c("N%" = "<count> (<percentage>)",
                          "N" = "<count>",
                          "Mean (SD)" = "<mean> (<sd>)"),
@@ -123,7 +124,7 @@ mock_sr2 |> formatTable(
 )
 
 ## -----------------------------------------------------------------------------
-mock_sr2 |> formatTable(
+mock_sr2 |> visOmopTable(
   formatEstimateName = c("N%" = "<count> (<percentage>)",
                          "N" = "<count>",
                          "Mean (SD)" = "<mean> (<sd>)"),
@@ -133,5 +134,5 @@ mock_sr2 |> formatTable(
 )
 
 ## -----------------------------------------------------------------------------
-optionsFormatTable()
+optionsVisOmopTable()
 
