@@ -7,7 +7,7 @@
 pivotEstimates(result, pivotEstimatesBy = "estimate_name", nameStyle = NULL)
 }
 \arguments{
-\item{result}{A summarised_result.}
+\item{result}{A \verb{<summarised_result>}.}
 
 \item{pivotEstimatesBy}{Names from which pivot wider the estimate values. If
 NULL the table will not be pivotted.}
@@ -20,7 +20,6 @@ be used.}
 A tibble.
 }
 \description{
-\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 Pivot the estimates as new columns in result table.
 }
 \examples{

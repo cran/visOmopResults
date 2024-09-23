@@ -13,9 +13,7 @@ gtTable(
   subtitle = NULL,
   caption = NULL,
   groupColumn = NULL,
-  groupNameCol = lifecycle::deprecated(),
   groupAsColumn = FALSE,
-  groupNameAsColumn = lifecycle::deprecated(),
   groupOrder = NULL,
   colsToMergeRows = NULL
 )
@@ -26,9 +24,13 @@ gtTable(
 \item{delim}{Delimiter.}
 
 \item{style}{Named list that specifies how to style the different parts of
-the gt table. Accepted entries are: title, subtitle, header, header_name,
-header_level, column_name, group_label, and body. Alternatively, use
-"default" to get visOmopResults style, or NULL for gt style}
+the gt or flextable table generated. Accepted style entries are: title,
+subtitle, header, header_name, header_level, column_name, group_label, and
+body.
+Alternatively, use "default" to get visOmopResults style, or NULL for
+gt/flextable style.
+Keep in mind that styling code is different for gt and flextable. To see
+the "deafult" style code use \code{tableStyle()}.}
 
 \item{na}{How to display missing values.}
 
@@ -40,16 +42,13 @@ header_level, column_name, group_label, and body. Alternatively, use
 markdown formatting style (e.g. \verb{*Your caption here*} for caption in
 italics).}
 
-\item{groupColumn}{Column to use as group labels.}
-
-\item{groupNameCol}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} This argument was
-renamed to "groupColumn" for consistency throughout the package functions.}
+\item{groupColumn}{Specifies the columns to use for group labels.
+By default, the new group name will be a combination of the column names,
+joined by "_". To assign a custom group name, provide a named list such as:
+list(\code{newGroupName} = c("variable_name", "variable_level"))}
 
 \item{groupAsColumn}{Whether to display the group labels as a column
 (TRUE) or rows (FALSE).}
-
-\item{groupNameAsColumn}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} This argument was
-renamed to "groupAsColumn" for consistency with the argument "groupColumn".}
 
 \item{groupOrder}{Order in which to display group labels.}
 
@@ -64,32 +63,7 @@ gt object.
 A gt table.
 }
 \description{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 Creates a flextable object from a dataframe using a delimiter to span
 the header, and allows to easily customise table style.
-}
-\examples{
-mockSummarisedResult() |>
-  formatEstimateValue(decimals = c(integer = 0, numeric = 1)) |>
-  formatHeader(header = c("Study strata", "strata_name", "strata_level"),
-              includeHeaderName = FALSE) |>
-  gtTable(
-    style = list("header" = list(
-      gt::cell_fill(color = "#d9d9d9"),
-      gt::cell_text(weight = "bold")),
-      "header_level" = list(gt::cell_fill(color = "#e1e1e1"),
-                            gt::cell_text(weight = "bold")),
-      "column_name" = list(gt::cell_text(weight = "bold")),
-      "title" = list(gt::cell_text(weight = "bold"),
-                     gt::cell_fill(color = "#c8c8c8")),
-      "group_label" = gt::cell_fill(color = "#e1e1e1")),
-    na = "--",
-    title = "gtTable example",
-    subtitle = NULL,
-    caption = NULL,
-    groupColumn = "group_level",
-    groupAsColumn = FALSE,
-    groupOrder = c("cohort1", "cohort2"),
-    colsToMergeRows = "all_columns"
-  )
-
 }

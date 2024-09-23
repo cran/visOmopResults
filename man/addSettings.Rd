@@ -2,19 +2,32 @@
 % Please edit documentation in R/addSettings.R
 \name{addSettings}
 \alias{addSettings}
-\title{Add settings columns to a summaries_result object.}
+\title{Add settings columns to a \verb{<summarised_result>} object}
 \usage{
-addSettings(result, columns = NULL)
+addSettings(
+  result,
+  settingsColumns = colnames(settings(result)),
+  columns = lifecycle::deprecated()
+)
 }
 \arguments{
-\item{result}{A summarised_result object.}
+\item{result}{A \verb{<summarised_result>} object.}
 
-\item{columns}{Settings to be added as columns, by default all settings will
+\item{settingsColumns}{Settings to be added as columns, by default all
+settings will be added. If NULL or empty character vector, no settings will
 be added.}
+
+\item{columns}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}}
 }
 \value{
-A summarised_result object with the added setting columns.
+A \verb{<summarised_result>} object with the added setting columns.
 }
 \description{
-Add settings columns to a summaries_result object.
+Add settings columns to a \verb{<summarised_result>} object
+}
+\examples{
+library(visOmopResults)
+mockSummarisedResult() |>
+  addSettings(settingsColumns = c("result_type"))
+
 }

@@ -9,12 +9,11 @@ splitNameLevel(
   name = "group_name",
   level = "group_level",
   keep = FALSE,
-  fill = "overall",
-  overall = lifecycle::deprecated()
+  fill = "overall"
 )
 }
 \arguments{
-\item{result}{A summarised_result object.}
+\item{result}{A \verb{<summarised_result>} object.}
 
 \item{name}{Column with the names.}
 
@@ -24,20 +23,12 @@ splitNameLevel(
 
 \item{fill}{Optionally, a character that specifies what value should be
 filled in with when missing.}
-
-\item{overall}{deprecated.}
 }
 \value{
 A dataframe with the specified name column values as columns.
 }
 \description{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 Pivots the input dataframe so the values of the name columns are transformed
 into columns, which values come from the specified level column.
-}
-\examples{
-mockSummarisedResult() |>
-  splitNameLevel(name = "group_name",
-                 level = "group_level",
-                 keep = FALSE)
-
 }

@@ -1,17 +1,4 @@
-
-validateResult <- function(x, call = parent.frame()) {
-  xn <- tryCatch(
-    omopgenerics::newSummarisedResult(x),
-    error = function(e){NULL}
-  )
-  if (!is.null(xn)) {
-    return(xn)
-  }
-  if (!is.null(xn)) {
-    return(xn)
-  }
-  cli::cli_abort("Please provide a valid result object.", call = call)
-}
+# Validate functions specific of `visOmopResults` package
 
 validateDecimals <- function(result, decimals) {
   nm_type <- omopgenerics::estimateTypeChoices()
@@ -53,7 +40,8 @@ validateDecimals <- function(result, decimals) {
   return(decimals)
 }
 
-validateEstimateNameFormat <- function(format, call = parent.frame()) {
+validateEstimateName <- function(format, call = parent.frame()) {
+  omopgenerics::assertCharacter(format, null = TRUE)
   if (!is.null(format)) {
     if (length(format) > 0){
       if (length(regmatches(format, gregexpr("(?<=\\<).+?(?=\\>)", format, perl = T)) |> unlist()) == 0) {
@@ -63,57 +51,167 @@ validateEstimateNameFormat <- function(format, call = parent.frame()) {
       format <- NULL
     }
   }
-  return(format)
+  return(invisible(format))
 }
 
 validateStyle <- function(style, tableFormatType) {
   if (is.list(style) | is.null(style)) {
-    assertList(style, null = TRUE, named = TRUE)
-  } else if (is.character(style)) {
-    assertCharacter(style, null = TRUE)
-    eval(parse(text = paste0("style <- ", tableFormatType, "Styles(styleName = style)")))
-  } else {
-    if (tableFormatType == "fx") {
-      tableFormatType <- "flextable"
+    omopgenerics::assertList(style, null = TRUE, named = TRUE)
+    if (is.list(style)) {
+      notIn <- !names(style) %in% names(gtStyleInternal("default"))
+      if (sum(notIn) > 0) {
+        cli::cli_abort(c("`style` can only be defined for the following table parts: {gtStyleInternal('default') |> names()}.",
+                      "x" =  "{.strong {names(style)[notIn]}} {?is/are} not one of them."))
+      }
     }
+  } else if (is.character(style)) {
+    omopgenerics::assertCharacter(style, null = TRUE)
+    eval(parse(text = paste0("style <- ", tableFormatType, "StyleInternal(styleName = style)")))
+  } else {
     cli::cli_abort(paste0("Style must be one of 1) a named list of ", tableFormatType, " styling functions,
                    2) the string 'default' for visOmopResults default style, or 3) NULL to indicate no styling."))
   }
   return(style)
 }
 
-validateColsToMergeRows <- function(x, colsToMergeRows, groupNameCol) {
-  if (!is.null(colsToMergeRows)) {
-    if (any(colsToMergeRows %in% groupNameCol)) {
-      cli::cli_abort("groupNameCol and colsToMergeRows must have different column names.")
+validatePivotEstimatesBy <- function(pivotEstimatesBy, call = parent.frame()) {
+  omopgenerics::assertCharacter(x = pivotEstimatesBy, null = TRUE, call = call)
+  notValid <- any(c(
+    !pivotEstimatesBy %in% omopgenerics::resultColumns(),
+    c("estimate_type", "estimate_value") %in% pivotEstimatesBy
+  ))
+  if (isTRUE(notValid)) {
+    cli::cli_abort(
+      c("x" = "`pivotEstimatesBy` must refer to <summarised_result> columns.
+        It cannot include `estimate_value` and `estimate_type`."),
+      call = call)
+  }
+  return(invisible(pivotEstimatesBy))
+}
+
+validateSettingsColumns <- function(settingsColumns, result, call = parent.frame()) {
+  set <- settings(result)
+  omopgenerics::assertCharacter(x = settingsColumns, null = TRUE, call = call)
+  if (!is.null(settingsColumns)) {
+    omopgenerics::assertTable(set, columns = settingsColumns)
+    settingsColumns <- settingsColumns[settingsColumns != "result_id"]
+    notPresent <- settingsColumns[!settingsColumns %in% colnames(set)]
+    if (length(notPresent) > 0) {
+      cli::cli_abort("The following `settingsColumns` are not present in settings: {notPresent}.")
     }
-    ind <- ! colsToMergeRows %in% c(colnames(x), "all_columns")
+  } else {
+    settingsColumns <- character()
+  }
+  return(invisible(settingsColumns))
+}
+
+validateRename <- function(rename, result, call = parent.frame()) {
+  omopgenerics::assertCharacter(rename, null = TRUE, named = TRUE, call = call)
+  if (!is.null(rename)) {
+    notCols <- !rename %in% colnames(result)
+    if (sum(notCols) > 0) {
+      cli::cli_warn(
+        "The following values of `rename` do not refer to column names
+        and will be ignored: {rename[notCols]}", call = call
+      )
+      rename <- rename[!notCols]
+    }
+  } else {
+    rename <- character()
+  }
+  return(invisible(rename))
+}
+
+validateGroupColumn <- function(groupColumn, cols, sr = NULL, rename = NULL, call = parent.frame()) {
+  if (!is.null(groupColumn)) {
+    if (!is.list(groupColumn)) {
+      groupColumn <- list(groupColumn)
+    }
+    if (length(groupColumn) > 1) {
+      cli::cli_abort("`groupColumn` must be a character vector, or a list with just one element (a character vector).", call = call)
+    }
+    omopgenerics::assertCharacter(groupColumn[[1]], null = TRUE, call = call)
+    if (!is.null(sr) & length(groupColumn[[1]]) > 0) {
+      settingsColumns <- settingsColumns(sr)
+      settingsColumns <- settingsColumns[settingsColumns %in% cols]
+      groupColumn[[1]] <- purrr::map(groupColumn[[1]], function(x) {
+        if (x %in% c("group", "strata", "additional", "estimate", "settings")) {
+          switch(x,
+                 group = groupColumns(sr),
+                 strata = strataColumns(sr),
+                 additional = additionalColumns(sr),
+                 estimate = "estimate_name",
+                 settings = settingsColumns)
+        } else {
+          x
+        }
+      }) |> unlist()
+    }
+    if (any(!groupColumn[[1]] %in% cols)) {
+      set <- character()
+      if (!is.null(sr)) set <- "or in the settings stated in `settingsColumns`"
+      cli::cli_abort("`groupColumn` must refer to columns in the result table {set}", call = call)
+    }
+    if (is.null(names(groupColumn)) & length(groupColumn[[1]]) > 0) {
+      if (!is.null(rename)) {
+        names(groupColumn) <- paste0(renameInternal(groupColumn[[1]], rename), collapse = "; ")
+      } else {
+        names(groupColumn) <- paste0(groupColumn[[1]], collapse = "_")
+      }
+    }
+  }
+  return(invisible(groupColumn))
+}
+
+validateMerge <- function(x, merge, groupColumn, call = parent.frame()) {
+  if (!is.null(merge)) {
+    if (any(merge %in% groupColumn)) {
+      cli::cli_abort("groupColumn and merge must have different column names.", call = call)
+    }
+    ind <- ! merge %in% c(colnames(x), "all_columns")
     if (sum(ind) == 1) {
-      cli::cli_inform(c("!" = "{colsToMergeRows[ind]} is not a column in the dataframe."))
+      cli::cli_inform(c("!" = "{merge[ind]} is not a column in the dataframe.", call = call))
     } else if (sum(ind) > 1) {
-      cli::cli_inform(c("!" = "{colsToMergeRows[ind]} are not columns in the dataframe."))
+      cli::cli_inform(c("!" = "{merge[ind]} are not columns in the dataframe.", call = call))
     }
+    omopgenerics::assertCharacter(merge)
   }
+  return(invisible(merge))
 }
 
-validateDelim <- function(delim) {
-  if (!rlang::is_character(delim)) {
-    cli::cli_abort("The value supplied for `delim` must be of type `character`.")
-  }
-  if (length(delim) != 1) {
-    cli::cli_abort("`delim` must be a single value.")
-  }
+validateDelim <- function(delim, call = parent.frame()) {
+  omopgenerics::assertCharacter(delim, length = 1)
   if (nchar(delim) != 1) {
-    cli::cli_abort("The value supplied for `delim` must be a single character.")
+    cli::cli_abort("The value supplied for `delim` must be a single character.", call = call)
   }
+  return(invisible(delim))
 }
 
-checkGroupColumn <- function(groupColumn) {
-  if (inherits(groupColumn, "list")) {
-    assertList(groupColumn, length = 1, null = TRUE, named = TRUE)
-    assertCharacter(groupColumn[[1]], null = TRUE)
+validateShowMinCellCount <- function(showMinCellCount, set) {
+  omopgenerics::assertLogical(showMinCellCount, length = 1)
+  if ((!"min_cell_count" %in% colnames(set)) & isTRUE(showMinCellCount)) {
+    cli::cli_inform(c("!" = "Results have not been suppressed."))
+    showMinCellCount <- FALSE
   }
-  if (inherits(groupColumn, "character")) {
-    assertCharacter(groupColumn, null = TRUE)
+  return(invisible(showMinCellCount))
+}
+
+validateSettingsAttribute <- function(result, call = parent.frame()) {
+  set <- attr(result, "settings")
+  if (is.null(set)) {
+    cli::cli_abort("`result` does not have attribute settings", call = call)
+  }
+  if (!"result_id" %in% colnames(set) | !"result_id" %in% colnames(result)) {
+    cli::cli_abort("'result_id' must be part of both `result` and its settings attribute.", call = call)
+  }
+  return(invisible(set))
+}
+
+checkVisTableInputs <- function(header, groupColumn, hide, call = parent.frame()) {
+  int1 <- dplyr::intersect(header, groupColumn[[1]])
+  int2 <- dplyr::intersect(header, hide)
+  int3 <- dplyr::intersect(hide, groupColumn[[1]])
+  if (length(c(int1, int2, int3)) > 0) {
+    cli::cli_abort("Columns passed to {.strong `header`}, {.strong `groupColumn`}, and {.strong `hide`} must be different.", call = call)
   }
 }

@@ -30,21 +30,6 @@ uniteNameLevel(
 A tibble with the new columns.
 }
 \description{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 Unites targeted table columns into a pair of name-level columns.
-}
-\examples{
-x <- dplyr::tibble(
-  variable = "number subjects",
-  value = c(10, 15, 40, 78),
-  sex = c("Male", "Female", "Male", "Female"),
-  age_group = c("<40", ">40", ">40", "<40")
-)
-
-x |>
-  uniteNameLevel(
-    cols = c("sex", "age_group"),
-    name = "new_column_name",
-    level = "new_column_level"
-  )
-
 }

@@ -123,11 +123,12 @@ test_that("formatHeader", {
                               header = c("test_spanHeader", "end_spanner"),
                               delim = ":",
                               includeHeaderName = TRUE)
-  expect_true(
-    result_output |>
-      dplyr::anti_join(result |> dplyr::rename("[header]test_spanHeader:[header]end_spanner" = "estimate_value"),
-                       by = colnames(result_output)) |>
-      nrow() == 0
+  class(result_output) <- class(result)
+  expect_equal(
+    result_output,
+    result |>
+      dplyr::relocate("estimate_value", .after = dplyr::last_col()) |>
+      dplyr::rename("[header]test_spanHeader:[header]end_spanner" = "estimate_value")
   )
 
   # not column name + named header ----
@@ -260,5 +261,16 @@ test_that("formatHeader. includeHeaderKey", {
                            header = NA,
                            includeHeaderName = TRUE))
 
+})
+
+test_that("formatHeader", {
+
+result <- mockSummarisedResult()
+
+expect_error(formatHeader(result,
+    header = c("Study cohorts", "group_level", "Study strata", "strata_name",
+               "strata_level", "Variables", "variable_name", "variable_level"
+    ),
+    includeHeaderName = FALSE))
 })
 
