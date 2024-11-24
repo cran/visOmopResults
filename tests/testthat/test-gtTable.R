@@ -334,9 +334,10 @@ test_that("groupColumn",{
                c('cohort_name; cohort1', 'cohort_name; cohort2'))
 })
 
-test_that("lifestyle::deprecate_soft works", {
+test_that("gtStyleInternal", {
 
-  x <- mockSummarisedResult()
+  expect_message(gtStyleInternal("style"))
 
-  expect_warning(gtTable(x))
+  expect_equal(gtStyleInternal("style"), gtStyleInternal("default"))
+
 })

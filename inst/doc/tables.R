@@ -73,7 +73,7 @@ visOmopTable(
   ),
   header = c("package_name", "age_group"),
   groupColumn = c("cohort_name", "sex"),
-  settingsColumns = "package_name",
+  settingsColumn = "package_name",
   type = "gt"
 )
 
