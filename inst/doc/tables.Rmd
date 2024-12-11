@@ -127,7 +127,7 @@ visOmopTable(
 
 The workflow is quite similar to `visTable()`, but it includes specific enhancements for `<summarised_result>` objects:
 
-- **Automatic splitting**: The result object is always processed using the [`splitAll()`](https://darwin-eu-dev.github.io/omopgenerics/reference/splitAll.html) function. Thereby, column names to use in other arguments must be based on the split result.
+- **Automatic splitting**: The result object is always processed using the [`splitAll()`](https://darwin-eu.github.io/visOmopResults/reference/splitAll.html) function. Thereby, column names to use in other arguments must be based on the split result.
 
 - **`settingsColumn` argument**: Use this argument to specify which settings should be displayed in the main table. The columns specified here can also be referenced in other arguments such as `header`, `rename`, and `groupColumn.`
 
