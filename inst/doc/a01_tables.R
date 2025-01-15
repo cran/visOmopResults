@@ -3,7 +3,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   warning = FALSE,
-  message = FALSE
+  message = FALSE,
+  fig.width=7.2, 
+  fig.height=5
 )
 options(rmarkdown.html_vignette.check_title = FALSE)
 
@@ -44,8 +46,7 @@ x <- x |>
 visTable(
   result = x,
   estimateName = c(
-    "Bill length (mm)" = "<bill_length_mm>",
-    "Bill depth (mm)" = "<bill_depth_mm>",
+    "Bill length - Bill depth (mm)" = "<bill_length_mm> - <bill_depth_mm>",
     "Flipper length (mm)" = "<flipper_length_mm>"
   ),
   header = c("species", "island"),
@@ -146,6 +147,8 @@ tableOptions()
 tableStyle(type = "gt")
 
 tableStyle(type = "flextable")
+
+tableStyle(type = "datatable")
 
 ## -----------------------------------------------------------------------------
 result |> 

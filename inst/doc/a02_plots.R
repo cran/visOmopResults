@@ -1,15 +1,16 @@
 ## ----include = FALSE----------------------------------------------------------
-  knitr::opts_chunk$set(
+knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   warning = FALSE,
-  fig.width=7, 
+  message = FALSE,
+  fig.width=7.2, 
   fig.height=5
-  )
-  options(rmarkdown.html_vignette.check_title = FALSE)
+)
+options(rmarkdown.html_vignette.check_title = FALSE)
 
 ## ----setup--------------------------------------------------------------------
-  library(visOmopResults)
+library(visOmopResults)
 
 ## -----------------------------------------------------------------------------
 library(PatientProfiles)
@@ -40,11 +41,10 @@ penguinsSummary <- bind(
   summariseIsland("Dream")
 )
 
-## -----------------------------------------------------------------------------
-tidyColumns(penguinsSummary)
+penguinsSummary |> glimpse()
 
 ## -----------------------------------------------------------------------------
-colnames(penguinsSummary)
+tidyColumns(penguinsSummary)
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
@@ -93,14 +93,16 @@ penguinsSummary |>
     colour = "sex",
     group = c("year", "sex")
   )  +
-  themeVisOmop(fontsizeRef = 10, legendPosition = "top") +
+  themeVisOmop() +
   ggplot2::coord_flip() +
-  ggplot2::labs(y = "Flipper length (mm)")
+  ggplot2::labs(y = "Flipper length (mm)") + 
+  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
-  filter(variable_name %in% c(
-    "flipper_length_mm", "bill_length_mm", "bill_depth_mm")) |>
+  filter(
+    variable_name %in% c("flipper_length_mm", "bill_length_mm", "bill_depth_mm")
+  ) |>
   filterStrata(sex == "overall") |>
   scatterPlot(
     x = "year", 
@@ -114,10 +116,8 @@ penguinsSummary |>
     colour = "variable_name",
     group = c("variable_name")
   ) +
-  themeVisOmop(
-    fontsizeRef = 10,
-    legendPosition = "top"
-  )
+  themeVisOmop(fontsizeRef = 12) + 
+  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
@@ -130,36 +130,27 @@ penguinsSummary |>
     colour = "sex",
     facet = cdm_name ~ species
   ) +
+  themeVisOmop(fontsizeRef = 12)
+
+## -----------------------------------------------------------------------------
+penguinsSummary |>
+  filter(variable_name == "body_mass_g") |>
+  boxPlot(x = "year", facet = species ~ cdm_name, colour = "sex") +
   themeVisOmop()
-
-## -----------------------------------------------------------------------------
-penguinsSummary |>
-  filter(variable_name == "body_mass_g") |>
-  boxPlot(x = "year", facet = c("cdm_name", "species"), colour = "sex") +
-  themeVisOmop(fontsizeRef = 10)
-
-## -----------------------------------------------------------------------------
-penguinsSummary |>
-  filter(variable_name == "body_mass_g") |>
-  boxPlot(x = "year", facet = cdm_name ~ species, colour = "sex") +
-  themeVisOmop(fontsizeRef = 10, legendPosition = "bottom")
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
   filter(variable_name == "body_mass_g") |>
   filterGroup(species != "overall") |>
   filterStrata(sex %in% c("female", "male"), year != "overall") |>
-  boxPlot(x = "cdm_name", facet = sex ~ species, colour = "year") +
-  themeVisOmop()
+  boxPlot(x = "cdm_name", facet = c("sex", "species"), colour = "year") +
+  themeVisOmop(fontsizeRef = 11)
 
 ## -----------------------------------------------------------------------------
 penguinsTidy <- penguinsSummary |>
   filter(!estimate_name %in% c("density_x", "density_y")) |> # remove density for simplicity
   tidy()
 penguinsTidy |> glimpse()
-
-## -----------------------------------------------------------------------------
-penguinsTidy |> class()
 
 ## -----------------------------------------------------------------------------
 penguinsTidy |>
@@ -169,8 +160,8 @@ penguinsTidy |>
     sex %in% c("female", "male"),
     year != "overall"
   ) |>
-  boxPlot(x = "cdm_name", facet = ~ species + sex, colour = "year") +
-  themeVisOmop(fontsizeRef = 12)
+  boxPlot(x = "cdm_name", facet = sex ~ species, colour = "year") +
+  themeVisOmop()
 
 ## -----------------------------------------------------------------------------
 library(ggplot2)
@@ -178,11 +169,12 @@ penguinsSummary |>
   filter(variable_name == "number records") |>
   tidy() |>
   ggplot(aes(x = year, y = sex, fill = count, label = count)) +
-  themeVisOmop(fontsizeRef = 10) +
+  themeVisOmop() +
   geom_tile() +
   scale_fill_viridis_c(trans = "log") + 
   geom_text() +
-  facet_grid(cdm_name ~ species)
+  facet_grid(cdm_name ~ species) + 
+  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
@@ -192,7 +184,7 @@ penguinsSummary |>
     !grepl("NA", strata_level),
     variable_name == "body_mass_g") |>
   boxPlot(x = "species", facet = cdm_name ~ sex, colour = "year") +
-  themeVisOmop(legendPosition = "top") +
+  themeVisOmop(fontsizeRef = 12) +
   ylim(c(0, 6500)) +
   labs(x = "My custom x label")
 
