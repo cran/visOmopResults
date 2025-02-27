@@ -157,6 +157,9 @@ result |>
   select(variable_name, variable_level, estimate_name, estimate_type, estimate_value)
 
 ## -----------------------------------------------------------------------------
+result <- result |> formatMinCellCount()
+
+## -----------------------------------------------------------------------------
 # Formatting estimate values
 result <- result |>
   formatEstimateValue(
