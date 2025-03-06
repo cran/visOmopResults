@@ -1,31 +1,31 @@
 Package: visOmopResults
 Title: Graphs and Tables for OMOP Results
-Version: 1.0.1
+Version: 1.0.2
 Depends: R (>= 4.1.0)
 Authors@R: c(
     person(
-        "Martí", "Català", , "marti.catalasabate@ndorms.ox.ac.uk", 
-        role = c("aut"), comment = c(ORCID = "0000-0003-3308-9905")
+      "Martí", "Català", , "marti.catalasabate@ndorms.ox.ac.uk", 
+      role = c("aut"), comment = c(ORCID = "0000-0003-3308-9905")
     ),
     person(
-        "Núria", "Mercadé-Besora", , "nuria.mercadebesora@ndorms.ox.ac.uk", 
-        role = c("aut", "cre"), comment = c(ORCID = "0009-0006-7948-3747")
+      "Núria", "Mercadé-Besora", , "nuria.mercadebesora@ndorms.ox.ac.uk", 
+      role = c("aut", "cre"), comment = c(ORCID = "0009-0006-7948-3747")
     ),
     person(
-    "Yuchen", "Guo", , "yuchen.guo@ndorms.ox.ac.uk", 
-    role = c("ctb"), comment = c(ORCID = "0000-0002-0847-4855")
+      "Yuchen", "Guo", , "yuchen.guo@ndorms.ox.ac.uk", 
+      role = c("ctb"), comment = c(ORCID = "0000-0002-0847-4855")
     ),
     person(
-    "Elin", "Rowlands", , "elin.rowlands@ndorms.ox.ac.uk", 
-    role = c("ctb"), comment = c(ORCID = "0009-0007-6629-4661")
+      "Elin", "Rowlands", , "elin.rowlands@ndorms.ox.ac.uk", 
+      role = c("ctb"), comment = c(ORCID = "0009-0007-6629-4661")
     ),
     person(
-    "Marta", "Alcalde-Herraiz", , "marta.alcaldeherraiz@ndorms.ox.ac.uk", 
-    role = c("aut"), comment = c(ORCID = "0009-0002-4405-1814")
+      "Marta", "Alcalde-Herraiz", , "marta.alcaldeherraiz@ndorms.ox.ac.uk", 
+      role = c("ctb"), comment = c(ORCID = "0009-0002-4405-1814")
     ),
     person(
-    "Edward", "Burn", , "edward.burn@ndorms.ox.ac.uk", 
-    role = c("ctb"), comment = c(ORCID = "0000-0002-9286-1128")
+      "Edward", "Burn", , "edward.burn@ndorms.ox.ac.uk", 
+      role = c("ctb"), comment = c(ORCID = "0000-0002-9286-1128")
     )
   )
 Maintainer: Núria Mercadé-Besora <nuria.mercadebesora@ndorms.ox.ac.uk>
@@ -48,13 +48,13 @@ Config/testthat/parallel: true
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-02-27 12:21:47 UTC; nmercade
+Packaged: 2025-03-05 14:40:14 UTC; nmercade
 Author: Martí Català [aut] (<https://orcid.org/0000-0003-3308-9905>),
   Núria Mercadé-Besora [aut, cre]
     (<https://orcid.org/0009-0006-7948-3747>),
   Yuchen Guo [ctb] (<https://orcid.org/0000-0002-0847-4855>),
   Elin Rowlands [ctb] (<https://orcid.org/0009-0007-6629-4661>),
-  Marta Alcalde-Herraiz [aut] (<https://orcid.org/0009-0002-4405-1814>),
+  Marta Alcalde-Herraiz [ctb] (<https://orcid.org/0009-0002-4405-1814>),
   Edward Burn [ctb] (<https://orcid.org/0000-0002-9286-1128>)
 Repository: CRAN
-Date/Publication: 2025-02-27 13:00:02 UTC
+Date/Publication: 2025-03-06 12:20:02 UTC

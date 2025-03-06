@@ -189,7 +189,7 @@ penguinsSummary |>
   labs(x = "My custom x label")
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  ggsave(
-#    "figure8.png", plot = last_plot(), device = "png", width = 15, height = 12,
-#    units = "cm", dpi = 300)
+# ggsave(
+#   "figure8.png", plot = last_plot(), device = "png", width = 15, height = 12,
+#   units = "cm", dpi = 300)
 
