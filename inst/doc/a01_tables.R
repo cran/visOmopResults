@@ -26,8 +26,7 @@ visTable(
   groupColumn = c("sex"),
   rename = c("Bill length (mm)" = "bill_length_mm",
              "Bill depth (mm)" = "bill_depth_mm",
-             "Flipper length (mm)" = "flipper_length_mm",
-             "Body mass (g)" = "body_mass_g"),
+             "Flipper length (mm)" = "flipper_length_mm"),
   type = "gt",
   hide = "year"
 )
@@ -87,61 +86,12 @@ result |>
       "N" = "<count>",
       "Mean (SD)" = "<mean> (<sd>)"
     ),
-    header = c("My visOmopTable", "group"),
+    header = c("group"),
     groupColumn = c("strata"),
     hide = c("cdm_name"),
     showMinCellCount = TRUE,
-    type = "gt"
+    type = "reactable"
   )
-
-## ----echo=FALSE---------------------------------------------------------------
-bind_rows(
-  tibble(
-    Function = "formatEstimateValue()",
-    Argument = c("decimals", "decimalMark", "bigMark"),
-    Description = c(
-      "Number of decimals per estimate type (integer, numeric, percentage, proportion), estimate name, or all estimate values (introduce the number of decimals).",
-      "Decimal separator mark.",
-      "Thousand and millions separator mark."
-    )
-  ) ,
-  tibble(
-    Function = "formatEstimateName()",
-    Argument = c("keepNotFormatted", "useFormatOrder"),
-    Description = c(
-      "Whether to keep rows not formatted.",
-      "Whether to use the order in which estimate names appear in the estimateName (TRUE), or use the order in the input dataframe (FALSE)."
-    )
-  ),
-  tibble(
-    Function = "formatHeader()",
-    Argument = c("delim", "includeHeaderName", "includeHeaderKey"),
-    Description = c(
-      "Delimiter to use to separate headers.",
-      "Whether to include the column name as header.",
-      "Whether to include the header key (header, header_name, header_level) before each header type in the column names."
-    )
-  ),
-  tibble(
-    Function = "formatTable()",
-    Argument = c("style", "na", "title", "subtitle", "caption", "groupAsColumn", "groupOrder", "merge"),
-    Description = c(
-      "Named list that specifies how to style the different parts of the gt or flextable table generated. Accepted style entries are: title, subtitle, header, header_name, header_level, column_name, group_label, and body. Alternatively, use 'default' to get visOmopResults style, or NULL for gt/flextable style. Keep in mind that styling code is different for gt and flextable. To see the 'deafult' gt style code use gtStyle(), and flextableStyle() for flextable default code style",
-      "How to display missing values.",
-      "Title of the table, or NULL for no title.",
-      "Subtitle of the table, or NULL for no subtitle.",
-      "Caption for the table, or NULL for no caption. Text in markdown formatting style (e.g. ⁠*Your caption here*⁠ for caption in italics)",
-      "Whether to display the group labels as a column (TRUE) or rows (FALSE).",
-      "Order in which to display group labels.",
-      "Names of the columns to merge vertically when consecutive row cells have identical values. Alternatively, use 'all_columns' to apply this merging to all columns, or use NULL to indicate no merging."
-    )
-  )  
-) |>
-  formatTable(groupColumn = "Function")
-
-
-## -----------------------------------------------------------------------------
-tableOptions()
 
 ## -----------------------------------------------------------------------------
 tableStyle(type = "gt")
@@ -149,6 +99,56 @@ tableStyle(type = "gt")
 tableStyle(type = "flextable")
 
 tableStyle(type = "datatable")
+
+tableStyle(type = "reactable")
+
+## -----------------------------------------------------------------------------
+tableOptions()
+
+## ----echo=FALSE---------------------------------------------------------------
+bind_rows(
+  tibble(
+    Function = "formatEstimateValue()",
+    Argument = c("decimals", "decimalMark", "bigMark"),
+    Description = c(
+      "Number of decimals to display, which can be specified per estimate type (integer, numeric, percentage, proportion), per estimate name, or applied to all estimates.",
+      "Symbol to use as the decimal separator.",
+      "Symbol to use as the thousands and millions separator."
+    )
+  ),
+  tibble(
+    Function = "formatEstimateName()",
+    Argument = c("keepNotFormatted", "useFormatOrder"),
+    Description = c(
+      "Whether to retain rows with estimate names that are not explicitly formatted.",
+      "Whether to display estimate names in the order provided in `estimateName` (TRUE) or in the order of the input data frame (FALSE)."
+    )
+  ),
+  tibble(
+    Function = "formatHeader()",
+    Argument = c("delim", "includeHeaderName", "includeHeaderKey"),
+    Description = c(
+      "Delimiter to use when separating header components.",
+      "Whether to include the column name as part of the header.",
+      "Whether to prefix header elements with their type (e.g., header, header_name, header_level)."
+    )
+  ),
+  tibble(
+    Function = "formatTable()",
+    Argument = c("style", "na", "title", "subtitle", "caption", "groupAsColumn", "groupOrder", "merge"),
+    Description = c(
+      "Named list specifying styles for table components (e.g., title, subtitle, header, body). Use `'default'` for the default `visOmopResults` style or `NULL` for the package default (either `gt` or `flextable`). Use `gtStyle()` or `flextableStyle()` to preview the default styles.",
+      "Value to display for missing data.",
+      "Title of the table. Use `NULL` for no title.",
+      "Subtitle of the table. Use `NULL` for no subtitle.",
+      "Caption in markdown format. Use `NULL` for no caption. For example, *Your caption here* renders in italics.",
+      "Whether to display group labels as a separate column (`TRUE`) or as row headers (`FALSE`).",
+      "Order in which to display group labels.",
+      "Columns to merge vertically when consecutive cells have the same value. Use `'all_columns'` to merge all, or `NULL` for no merging."
+    )
+  )
+) |>
+  formatTable(groupColumn = "Function")
 
 ## -----------------------------------------------------------------------------
 result |> 

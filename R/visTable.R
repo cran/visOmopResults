@@ -39,10 +39,18 @@
 #' @param type The desired format of the output table. See `tableType()` for
 #' allowed options.
 #' @param hide Columns to drop from the output table.
+#' @param style Named list that specifies how to style the different parts of
+#' the gt or flextable table generated. Accepted style entries are: title,
+#' subtitle, header, header_name, header_level, column_name, group_label, and
+#' body.
+#' Alternatively, use "default" to get visOmopResults style, or NULL for
+#' gt/flextable style.
+#' Keep in mind that styling code is different for gt and flextable. To see
+#' the "deafult" style code use `tableStyle()`.
 #' @param .options A named list with additional formatting options.
 #' `visOmopResults::tableOptions()` shows allowed arguments and their default values.
 #'
-#' @return A tibble, gt, or flextable object.
+#' @return A tibble, gt, flextable, reactable, or datatable object.
 #'
 #' @description
 #' This function combines the functionalities of `formatEstimateValue()`,
@@ -73,6 +81,7 @@ visTable <- function(result,
                      rename = character(),
                      type = "gt",
                      hide = character(),
+                     style = "default",
                      .options = list()) {
   # initial checks
   omopgenerics::assertTable(result)
@@ -91,6 +100,11 @@ visTable <- function(result,
   checkVisTableInputs(header, groupColumn, hide)
 
   if (nrow(result) == 0) return(emptyTable(type = type))
+
+  if ("style" %in% names(.options)) {
+    cli::cli_inform("`style` in `.options` was deprecated in v1.0.1, use the argument `style`.")
+    style <- .options$style
+  }
 
   # format estimate values and names
   if ("estimate_value" %in% colnames(result)) {
@@ -158,7 +172,7 @@ visTable <- function(result,
       formatTable(
         type = type,
         delim = .options$delim,
-        style = .options$style,
+        style = style,
         na = .options$na,
         title = .options$title,
         subtitle = .options$subtitle,

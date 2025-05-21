@@ -75,14 +75,19 @@ validateStyle <- function(style, tableFormatType) {
     if (is.list(style) | is.null(style)) {
       omopgenerics::assertList(style, null = TRUE, named = TRUE)
       if (is.list(style)) {
-        notIn <- !names(style) %in% names(gtStyleInternal("default"))
-        if (sum(notIn) > 0 & tableFormatType != "datatable") {
-          cli::cli_abort(c("`style` can only be defined for the following table parts: {gtStyleInternal('default') |> names()}.",
-                           "x" =  "{.strong {names(style)[notIn]}} {?is/are} not one of them."))
-        }
         notIn <- !names(style) %in% names(datatableStyleInternal("default"))
         if (sum(notIn) > 0 & tableFormatType == "datatable") {
-          cli::cli_abort(c("`style` can only be defined for the following table parts: {datatableStyleInternal('default') |> names()}.",
+          cli::cli_abort(c("`style` can only be defined for the following table parts in `datatable`: {datatableStyleInternal('default') |> names()}.",
+                           "x" =  "{.strong {names(style)[notIn]}} {?is/are} not one of them."))
+        }
+        notIn <- !names(style) %in% names(reactableStyleInternal("default"))
+        if (sum(notIn) > 0 & tableFormatType == "reactable") {
+          cli::cli_abort(c("`style` can only be defined for the following table parts in `reactable`: {datatableStyleInternal('default') |> names()}.",
+                           "x" =  "{.strong {names(style)[notIn]}} {?is/are} not one of them."))
+        }
+        notIn <- !names(style) %in% names(gtStyleInternal("default"))
+        if (sum(notIn) > 0 & !tableFormatType %in% c("datatable", "reactable")) {
+          cli::cli_abort(c("`style` can only be defined for the following table parts in `gt` and `flextable`: {gtStyleInternal('default') |> names()}.",
                            "x" =  "{.strong {names(style)[notIn]}} {?is/are} not one of them."))
         }
       }
