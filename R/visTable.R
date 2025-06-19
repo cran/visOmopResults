@@ -40,13 +40,11 @@
 #' allowed options.
 #' @param hide Columns to drop from the output table.
 #' @param style Named list that specifies how to style the different parts of
-#' the gt or flextable table generated. Accepted style entries are: title,
-#' subtitle, header, header_name, header_level, column_name, group_label, and
-#' body.
-#' Alternatively, use "default" to get visOmopResults style, or NULL for
-#' gt/flextable style.
-#' Keep in mind that styling code is different for gt and flextable. To see
-#' the "deafult" style code use `tableStyle()`.
+#' the table generated. It can either be a pre-defined style ("default" or
+#' "darwin" - the latter just for gt and flextable), NULL to get the table
+#' default style, or custom.
+#' Keep in mind that styling code is different for all table styles. To see
+#' the different styles use `tableStyle()`.
 #' @param .options A named list with additional formatting options.
 #' `visOmopResults::tableOptions()` shows allowed arguments and their default values.
 #'
