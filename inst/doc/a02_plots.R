@@ -72,10 +72,9 @@ penguinsSummary |>
     point = FALSE,
     ribbon = FALSE,
     facet = cdm_name ~ variable_name,
-    colour = "species"
-  ) +
-  themeVisOmop() +
-  ggplot2::facet_grid(cdm_name ~ variable_name, scales = "free_x") 
+    colour = "species",
+    style = "darwin"
+  ) 
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
@@ -93,7 +92,7 @@ penguinsSummary |>
     colour = "sex",
     group = c("year", "sex")
   )  +
-  themeVisOmop() +
+  themeVisOmop(fontsizeRef = 13) +
   ggplot2::coord_flip() +
   ggplot2::labs(y = "Flipper length (mm)") + 
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
@@ -116,7 +115,7 @@ penguinsSummary |>
     colour = "variable_name",
     group = c("variable_name")
   ) +
-  themeVisOmop(fontsizeRef = 12) + 
+  themeDarwin(fontsizeRef = 12) + 
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ## -----------------------------------------------------------------------------
@@ -135,8 +134,7 @@ penguinsSummary |>
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
   filter(variable_name == "body_mass_g") |>
-  boxPlot(x = "year", facet = species ~ cdm_name, colour = "sex") +
-  themeVisOmop()
+  boxPlot(x = "year", facet = species ~ cdm_name, colour = "sex", style = "default")
 
 ## -----------------------------------------------------------------------------
 penguinsSummary |>
@@ -160,8 +158,7 @@ penguinsTidy |>
     sex %in% c("female", "male"),
     year != "overall"
   ) |>
-  boxPlot(x = "cdm_name", facet = sex ~ species, colour = "year") +
-  themeVisOmop()
+  boxPlot(x = "cdm_name", facet = sex ~ species, colour = "year", style = "darwin")
 
 ## -----------------------------------------------------------------------------
 library(ggplot2)
@@ -189,7 +186,7 @@ penguinsSummary |>
   labs(x = "My custom x label")
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  ggsave(
-#    "figure8.png", plot = last_plot(), device = "png", width = 15, height = 12,
-#    units = "cm", dpi = 300)
+# ggsave(
+#   "figure8.png", plot = last_plot(), device = "png", width = 15, height = 12,
+#   units = "cm", dpi = 300)
 

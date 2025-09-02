@@ -94,13 +94,7 @@ result |>
   )
 
 ## -----------------------------------------------------------------------------
-tableStyle(type = "gt")
-
-tableStyle(type = "flextable")
-
-tableStyle(type = "datatable")
-
-tableStyle(type = "reactable")
+tableStyle(type = "gt", style = "default")
 
 ## -----------------------------------------------------------------------------
 tableOptions()

@@ -1,6 +1,6 @@
 Package: visOmopResults
 Title: Graphs and Tables for OMOP Results
-Version: 1.1.1
+Version: 1.2.0
 Authors@R: c(
     person(
       "Martí", "Català", , "marti.catalasabate@ndorms.ox.ac.uk", 
@@ -40,7 +40,8 @@ Imports: cli, dplyr, generics, glue, omopgenerics (>= 0.3.1), purrr,
         rlang, stringr, tidyr
 Suggests: covr, DT, flextable (>= 0.9.5), ggplot2, gt, htmltools,
         knitr, lifecycle, officer, palmerpenguins, PatientProfiles,
-        plotly, reactable, rmarkdown, testthat (>= 3.0.0)
+        plotly, reactable, rmarkdown, testthat (>= 3.0.0), tinytable
+        (>= 0.13.0)
 VignetteBuilder: knitr
 Depends: R (>= 4.1)
 Config/testthat/edition: 3
@@ -48,7 +49,7 @@ Config/testthat/parallel: true
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-06-19 16:26:39 UTC; nuriamb
+Packaged: 2025-09-02 13:32:20 UTC; nmercade
 Author: Martí Català [aut] (ORCID: <https://orcid.org/0000-0003-3308-9905>),
   Núria Mercadé-Besora [aut, cre] (ORCID:
     <https://orcid.org/0009-0006-7948-3747>),
@@ -58,4 +59,4 @@ Author: Martí Català [aut] (ORCID: <https://orcid.org/0000-0003-3308-9905>),
     <https://orcid.org/0009-0002-4405-1814>),
   Edward Burn [ctb] (ORCID: <https://orcid.org/0000-0002-9286-1128>)
 Repository: CRAN
-Date/Publication: 2025-06-19 17:40:02 UTC
+Date/Publication: 2025-09-02 14:10:02 UTC

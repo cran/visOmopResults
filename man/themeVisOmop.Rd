@@ -22,5 +22,5 @@ barPlot(
   y = "mean",
   facet = c("age_group", "sex"),
   colour = "sex") +
-  themeVisOmop()
+ themeVisOmop()
 }
