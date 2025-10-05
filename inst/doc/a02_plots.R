@@ -61,6 +61,8 @@ penguinsSummary |>
   )
 
 ## -----------------------------------------------------------------------------
+requireExtrafont()
+
 penguinsSummary |>
   filter(variable_name %in% c("bill_length_mm", "bill_depth_mm"))|>
   filterStrata(year == "overall", sex == "overall") |>
@@ -115,7 +117,7 @@ penguinsSummary |>
     colour = "variable_name",
     group = c("variable_name")
   ) +
-  themeDarwin(fontsizeRef = 12) + 
+  themeVisOmop(style = "darwin", fontsizeRef = 12) + 
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ## -----------------------------------------------------------------------------
@@ -189,4 +191,15 @@ penguinsSummary |>
 # ggsave(
 #   "figure8.png", plot = last_plot(), device = "png", width = 15, height = 12,
 #   units = "cm", dpi = 300)
+
+## ----eval=FALSE---------------------------------------------------------------
+# penguinsSummary |>
+#   filter(
+#     group_level != "overall",
+#     strata_name == "year &&& sex",
+#     !grepl("NA", strata_level),
+#     variable_name == "body_mass_g") |>
+#   boxPlot(x = "species", facet = cdm_name ~ sex, colour = "year", type = "plotly") +
+#   ylim(c(0, 6500)) +
+#   labs(x = "My custom x label")
 

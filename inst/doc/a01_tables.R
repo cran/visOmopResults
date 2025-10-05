@@ -94,7 +94,7 @@ result |>
   )
 
 ## -----------------------------------------------------------------------------
-tableStyle(type = "gt", style = "default")
+tableStyleCode(type = "gt", style = "default")
 
 ## -----------------------------------------------------------------------------
 tableOptions()
@@ -131,7 +131,7 @@ bind_rows(
     Function = "formatTable()",
     Argument = c("style", "na", "title", "subtitle", "caption", "groupAsColumn", "groupOrder", "merge"),
     Description = c(
-      "Named list specifying styles for table components (e.g., title, subtitle, header, body). Use `'default'` for the default `visOmopResults` style or `NULL` for the package default (either `gt` or `flextable`). Use `gtStyle()` or `flextableStyle()` to preview the default styles.",
+      "Named list specifying styles for table components (e.g., title, subtitle, header, body). Use `'default'` for the default `visOmopResults` style or `NULL` for the package default (either `gt` or `flextable`). Use `tableStyleCode()` to preview the pre-defined styles.",
       "Value to display for missing data.",
       "Title of the table. Use `NULL` for no title.",
       "Subtitle of the table. Use `NULL` for no subtitle.",
