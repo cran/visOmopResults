@@ -64,9 +64,6 @@ plotType  <- "ggplot"
 setGlobalPlotOptions(style = style, type = plotType) 
 setGlobalTableOptions(style = style, type = tableType)
 
-# Calibri font in ggplot figures (requires the extrafont package to be available)
-requireExtrafont()
-
 ## -----------------------------------------------------------------------------
 data$summarised_characteristics |>
   dplyr::filter(variable_name != "Sex") |>

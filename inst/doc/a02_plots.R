@@ -61,8 +61,6 @@ penguinsSummary |>
   )
 
 ## -----------------------------------------------------------------------------
-requireExtrafont()
-
 penguinsSummary |>
   filter(variable_name %in% c("bill_length_mm", "bill_depth_mm"))|>
   filterStrata(year == "overall", sex == "overall") |>

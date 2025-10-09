@@ -590,20 +590,19 @@ and hidden column options in a similar way.</p>
 format, as shown below:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>data<span class="sc">$</span>large_scale_characteristics</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; # A tibble: 952 × 8</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt;    cdm_name      cohort_name sex   variable_name variable_level concept_id count</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;          &lt;chr&gt;      &lt;int&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt;  1 my_duckdb_da… denominato… over… Acute allerg… -inf to -366   4084167      113</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt;  2 my_duckdb_da… denominato… over… Acute bacter… -inf to -366   4294548      607</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt;  3 my_duckdb_da… denominato… over… Acute bronch… -inf to -366   260139      2303</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt;  4 my_duckdb_da… denominato… over… Acute cholec… -inf to -366   198809        29</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;  5 my_duckdb_da… denominato… over… Acute viral … -inf to -366   4112343     2388</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  6 my_duckdb_da… denominato… over… Alzheimer&#39;s … -inf to -366   378419        15</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  7 my_duckdb_da… denominato… over… Anemia        -inf to -366   439777        73</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;  8 my_duckdb_da… denominato… over… Angiodysplas… -inf to -366   4310024      281</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  9 my_duckdb_da… denominato… over… Appendicitis  -inf to -366   440448       125</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; 10 my_duckdb_da… denominato… over… Atopic derma… -inf to -366   133834        54</span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; # ℹ 942 more rows</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt; # ℹ 1 more variable: percentage &lt;dbl&gt;</span></span></code></pre></div>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt;    cdm_name    cohort_name sex   concept_name window concept_id count percentage</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;      &lt;int&gt;      &lt;dbl&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt;  1 my_duckdb_… denominato… over… Acute aller… -inf … 4084167      113       4.41</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt;  2 my_duckdb_… denominato… over… Acute bacte… -inf … 4294548      607      23.7 </span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt;  3 my_duckdb_… denominato… over… Acute bronc… -inf … 260139      2303      89.8 </span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt;  4 my_duckdb_… denominato… over… Acute chole… -inf … 198809        29       1.13</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;  5 my_duckdb_… denominato… over… Acute viral… -inf … 4112343     2388      93.1 </span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  6 my_duckdb_… denominato… over… Alzheimer&#39;s… -inf … 378419        15       0.59</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  7 my_duckdb_… denominato… over… Anemia       -inf … 439777        73       2.85</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;  8 my_duckdb_… denominato… over… Angiodyspla… -inf … 4310024      281      11.0 </span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  9 my_duckdb_… denominato… over… Appendicitis -inf … 440448       125       4.88</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; 10 my_duckdb_… denominato… over… Atopic derm… -inf … 133834        54       2.11</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; # ℹ 942 more rows</span></span></code></pre></div>
 <p>In this case, we use <code>visTable()</code> to generate tables as
 either a <code>datatable</code> or a <code>reactable</code>, depending
 on the user’s choice in the UI. The table type is specified with the
@@ -716,7 +715,7 @@ consistent interface and style.</p>
 into a script named <strong><code>app.R</code></strong>, and add the
 following line at the end:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">shinyApp</span>(ui, server)</span></code></pre></div>
-<p>You can find the complete code run the ShinyApp <a href="https://github.com/darwin-eu/visOmopResults/tree/main/inst/app.R">here</a>.</p>
+<p>You can find the complete code run the ShinyApp <a href="https://github.com/darwin-eu/visOmopResults/blob/main/inst/app.R">here</a>.</p>
 </div>
 
 
