@@ -42,6 +42,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 # setGlobalTableOptions(style = style, type = tableType)
 # 
 # # Calibri font in ggplot figures (requires the extrafont package to be available)
+# # Read vignette on styles to learn more
 # requireExtrafont()
 
 ## ----echo=FALSE---------------------------------------------------------------
