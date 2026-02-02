@@ -1,6 +1,6 @@
 Package: visOmopResults
 Title: Graphs and Tables for OMOP Results
-Version: 1.4.0
+Version: 1.4.1
 Authors@R: c(
     person(
       "Martí", "Català", , "marti.catalasabate@ndorms.ox.ac.uk", 
@@ -36,14 +36,14 @@ License: Apache License (>= 2)
 URL: https://darwin-eu.github.io/visOmopResults/,
         https://github.com/darwin-eu/visOmopResults
 BugReports: https://github.com/darwin-eu/visOmopResults/issues
-Imports: cli, dplyr, generics, glue, omopgenerics (>= 0.3.1), purrr,
-        rlang, stringr, tidyr, yaml
-Suggests: bslib, CohortCharacteristics, covr, DT, extrafont, flextable
-        (>= 0.9.5), ggplot2, gt, here, htmltools, IncidencePrevalence,
-        knitr, lifecycle, officer, palmerpenguins, PatientProfiles,
-        plotly, reactable, rmarkdown, shiny, shinycssloaders,
-        shinyWidgets, sortable, testthat (>= 3.0.0), tinytable (>=
-        0.14.0)
+Imports: brand.yml, cli, dplyr, generics, glue, omopgenerics (>=
+        0.3.1), purrr, rlang, stringr, tidyr
+Suggests: bslib, CohortCharacteristics, covr, DT, flextable (>= 0.9.5),
+        ggplot2, gt, here, htmltools, IncidencePrevalence, knitr,
+        lifecycle, officer, palmerpenguins, PatientProfiles, plotly,
+        reactable, rmarkdown, shiny, shinycssloaders, shinyWidgets,
+        sortable, systemfonts, testthat (>= 3.0.0), tinytable (>=
+        0.14.0), yaml
 VignetteBuilder: knitr
 Depends: R (>= 4.1)
 Config/testthat/edition: 3
@@ -52,7 +52,7 @@ Encoding: UTF-8
 RoxygenNote: 7.3.3
 LazyData: true
 NeedsCompilation: no
-Packaged: 2025-11-07 13:07:56 UTC; nmercade
+Packaged: 2026-01-29 12:37:27 UTC; nuriamb
 Author: Martí Català [aut] (ORCID: <https://orcid.org/0000-0003-3308-9905>),
   Núria Mercadé-Besora [aut, cre] (ORCID:
     <https://orcid.org/0009-0006-7948-3747>),
@@ -62,4 +62,4 @@ Author: Martí Català [aut] (ORCID: <https://orcid.org/0000-0003-3308-9905>),
     <https://orcid.org/0009-0002-4405-1814>),
   Edward Burn [ctb] (ORCID: <https://orcid.org/0000-0002-9286-1128>)
 Repository: CRAN
-Date/Publication: 2025-11-07 15:00:02 UTC
+Date/Publication: 2026-02-02 16:10:02 UTC

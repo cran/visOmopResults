@@ -30,18 +30,18 @@ cat("```yaml\n", as.yaml(theme), "```", sep = "")
 ## ----echo=FALSE---------------------------------------------------------------
 tibble(
   "type" = "Plot",
-  "Part" = c("Background color", "Header (facet) color", "Header (facet) text color", "Border color", "Grid color", "Axis color", "Legend position", "Font family", "Font size"),
-  "Option 1" = c("plot:background-color", "plot:header-color", "plot:header-text-color", "plot:border-color", "plot:grid-major-color", "plot:axis-color", "plot:legend-position", "typography:plot", "plot:font-size"),
-  "Option 2" = c("color:background", "color:foreground", "-", "color:foreground", "color:foreground", "-", "-",  "typography:base", "typography:plot-font-size"),
-  "Option 3" = c(rep("-", 8), "typography:base-font-size")
+  "Part" = c("Background color", "Header (facet) color", "Header (facet) text color", "Header (facet) text bold", "Border color", "Grid color", "Axis color", "Legend position", "Font family", "Font size"),
+  "Option 1" = c("defaults:visOmopResults:plot:background-color", "defaults:visOmopResults:plot:header-color", "defaults:visOmopResults:plot:header-text-color", "defaults:visOmopResults:plot:header-text-bold", "defaults:visOmopResults:plot:border-color", "defaults:visOmopResults:plot:grid-major-color", "defaults:visOmopResults:plot:axis-color", "defaults:visOmopResults:plot:legend-position", "defaults:visOmopResults:plot:font_family", "defaults:visOmopResults:plot:font_size"),
+  "Option 2" = c("color:background", "color:foreground", "-", "color:foreground", "-", "color:foreground", "-", "-",  "typography:base:family", "defaults:visOmopResults:plot:font_size"),
+  "Option 3" = c(rep("-", 9), "typography:base:size")
 ) |> 
   bind_rows(
     tibble(
       "type" = "Table section",
       "Part" = c("Background color", "Text bold", "Text color", "Text align", "Font size", "Font family", "Border color", "Border width"),
-      "Option 1" = c("table:[section_name]:background-color", "table:[section_name]:text-bold", "table:[section_name]:text-color", "table:[section_name]:align", "table:[section_name]:font-size", "table:[section_name]:font-family", "table:[section_name]:border-color", "table:[section_name]:border-width"),
-      "Option 2" = c("color:background", "-", "-", "-", "typography:table-font-size", "typography:table", "table:border-color", "table:border-width"),
-      "Option 3" = c("-", "-", "-", "-", "typography:base-font-size", "typography:base", "-", "-")
+      "Option 1" = c("defaults:visOmopResults:table:[section_name]:background-color", "defaults:visOmopResults:table:[section_name]:text-bold", "defaults:visOmopResults:table:[section_name]:text-color", "defaults:visOmopResults:table:[section_name]:align", "defaults:visOmopResults:table:[section_name]:font-size", "defaults:visOmopResults:table:[section_name]:font-family", "defaults:visOmopResults:table:[section_name]:border-color", "defaults:visOmopResults:table:[section_name]:border-width"),
+      "Option 2" = c("color:background", "-", "-", "-", "defaults:visOmopResults:table:font-size", "defaults:visOmopResults:table:font_family", "defaults:visOmopResults:table:border-color", "defaults:visOmopResults:table:border-width"),
+      "Option 3" = c("-", "-", "-", "-", "defaults:visOmopResults:typography:base:size", "typography:base:family", "-", "-")
     )
   ) |>
   visTable(groupColumn = "type")
@@ -178,17 +178,7 @@ barPlot(
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9"))
 
 ## ----eval=FALSE---------------------------------------------------------------
-# library(extrafont)
-# 
-# # import system fonts (may take several minutes) - just needs to be done when
-# # a new font is installed
-# font_import(paths = NULL, prompt = FALSE)
-# 
-# # make fonts available for graphic devices using R
-# loadfonts(device = "win")
-
-## ----echo=FALSE---------------------------------------------------------------
-extrafont::loadfonts(device = "win")  
+# windowsFonts(Calibri = windowsFont("Calibri"))
 
 ## -----------------------------------------------------------------------------
 barPlot(

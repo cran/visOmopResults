@@ -40,10 +40,6 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 # plotType  <- "ggplot"
 # setGlobalPlotOptions(style = style, type = plotType)
 # setGlobalTableOptions(style = style, type = tableType)
-# 
-# # Calibri font in ggplot figures (requires the extrafont package to be available)
-# # Read vignette on styles to learn more
-# requireExtrafont()
 
 ## ----echo=FALSE---------------------------------------------------------------
 # Load necessary packages ----
@@ -72,7 +68,7 @@ data$summarised_characteristics |>
     header = c("sex"),
     hide   = c("cdm_name", "cohort_name", "table_name"),
     type   = tableType,
-    .options = list(style = style)
+    style = style
   )
 
 ## -----------------------------------------------------------------------------
@@ -166,7 +162,7 @@ data$measurement_change |>
 ## ----eval=FALSE---------------------------------------------------------------
 # num_table <- 1
 # cat(paste0(
-#   ':::{custom-style="CaptionDarwin"}\n',
+#   ':::{custom-style="Caption"}\n',
 #   '**Table ', num_table, ':** Baseline population characteristics.\n',
 #   ':::\n'
 # ))
