@@ -3520,8 +3520,9 @@ overflow: visible;
 }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -3532,7 +3533,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -3896,20 +3897,20 @@ renamed, and the year column hided:</p>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;gt&quot;</span>,</span>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  <span class="at">hide =</span> <span class="st">&quot;year&quot;</span></span>
 <span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>)</span></code></pre></div>
-<div id="erzwtyoznq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#erzwtyoznq table {
+<div id="lyabcozslo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lyabcozslo table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#erzwtyoznq thead, #erzwtyoznq tbody, #erzwtyoznq tfoot, #erzwtyoznq tr, #erzwtyoznq td, #erzwtyoznq th {
+#lyabcozslo thead, #lyabcozslo tbody, #lyabcozslo tfoot, #lyabcozslo tr, #lyabcozslo td, #lyabcozslo th {
 border-style: none;
 }
-#erzwtyoznq p {
+#lyabcozslo p {
 margin: 0;
 padding: 0;
 }
-#erzwtyoznq .gt_table {
+#lyabcozslo .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -3934,11 +3935,11 @@ border-left-style: solid;
 border-left-width: 3px;
 border-left-color: #E1E1E1;
 }
-#erzwtyoznq .gt_caption {
+#lyabcozslo .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#erzwtyoznq .gt_title {
+#lyabcozslo .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -3949,7 +3950,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#erzwtyoznq .gt_subtitle {
+#lyabcozslo .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -3960,7 +3961,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#erzwtyoznq .gt_heading {
+#lyabcozslo .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -3971,12 +3972,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#erzwtyoznq .gt_bottom_border {
+#lyabcozslo .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#erzwtyoznq .gt_col_headings {
+#lyabcozslo .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3990,7 +3991,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#erzwtyoznq .gt_col_heading {
+#lyabcozslo .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4009,7 +4010,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#erzwtyoznq .gt_column_spanner_outer {
+#lyabcozslo .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4020,13 +4021,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#erzwtyoznq .gt_column_spanner_outer:first-child {
+#lyabcozslo .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#erzwtyoznq .gt_column_spanner_outer:last-child {
+#lyabcozslo .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#erzwtyoznq .gt_column_spanner {
+#lyabcozslo .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -4037,10 +4038,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#erzwtyoznq .gt_spanner_row {
+#lyabcozslo .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#erzwtyoznq .gt_group_heading {
+#lyabcozslo .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4065,7 +4066,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#erzwtyoznq .gt_empty_group_heading {
+#lyabcozslo .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -4079,13 +4080,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#erzwtyoznq .gt_from_md > :first-child {
+#lyabcozslo .gt_from_md > :first-child {
 margin-top: 0;
 }
-#erzwtyoznq .gt_from_md > :last-child {
+#lyabcozslo .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#erzwtyoznq .gt_row {
+#lyabcozslo .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4103,7 +4104,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#erzwtyoznq .gt_stub {
+#lyabcozslo .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4115,7 +4116,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#erzwtyoznq .gt_stub_row_group {
+#lyabcozslo .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4128,13 +4129,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#erzwtyoznq .gt_row_group_first td {
+#lyabcozslo .gt_row_group_first td {
 border-top-width: 2px;
 }
-#erzwtyoznq .gt_row_group_first th {
+#lyabcozslo .gt_row_group_first th {
 border-top-width: 2px;
 }
-#erzwtyoznq .gt_summary_row {
+#lyabcozslo .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4143,14 +4144,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#erzwtyoznq .gt_first_summary_row {
+#lyabcozslo .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#erzwtyoznq .gt_first_summary_row.thick {
+#lyabcozslo .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#erzwtyoznq .gt_last_summary_row {
+#lyabcozslo .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4159,7 +4160,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#erzwtyoznq .gt_grand_summary_row {
+#lyabcozslo .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4168,7 +4169,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#erzwtyoznq .gt_first_grand_summary_row {
+#lyabcozslo .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4177,7 +4178,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#erzwtyoznq .gt_last_grand_summary_row_top {
+#lyabcozslo .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4186,10 +4187,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#erzwtyoznq .gt_striped {
+#lyabcozslo .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#erzwtyoznq .gt_table_body {
+#lyabcozslo .gt_table_body {
 border-top-style: solid;
 border-top-width: 3px;
 border-top-color: #E1E1E1;
@@ -4197,7 +4198,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#erzwtyoznq .gt_footnotes {
+#lyabcozslo .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4210,7 +4211,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#erzwtyoznq .gt_footnote {
+#lyabcozslo .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -4218,7 +4219,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#erzwtyoznq .gt_sourcenotes {
+#lyabcozslo .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4231,64 +4232,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#erzwtyoznq .gt_sourcenote {
+#lyabcozslo .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#erzwtyoznq .gt_left {
+#lyabcozslo .gt_left {
 text-align: left;
 }
-#erzwtyoznq .gt_center {
+#lyabcozslo .gt_center {
 text-align: center;
 }
-#erzwtyoznq .gt_right {
+#lyabcozslo .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#erzwtyoznq .gt_font_normal {
+#lyabcozslo .gt_font_normal {
 font-weight: normal;
 }
-#erzwtyoznq .gt_font_bold {
+#lyabcozslo .gt_font_bold {
 font-weight: bold;
 }
-#erzwtyoznq .gt_font_italic {
+#lyabcozslo .gt_font_italic {
 font-style: italic;
 }
-#erzwtyoznq .gt_super {
+#lyabcozslo .gt_super {
 font-size: 65%;
 }
-#erzwtyoznq .gt_footnote_marks {
+#lyabcozslo .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#erzwtyoznq .gt_asterisk {
+#lyabcozslo .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#erzwtyoznq .gt_indent_1 {
+#lyabcozslo .gt_indent_1 {
 text-indent: 5px;
 }
-#erzwtyoznq .gt_indent_2 {
+#lyabcozslo .gt_indent_2 {
 text-indent: 10px;
 }
-#erzwtyoznq .gt_indent_3 {
+#lyabcozslo .gt_indent_3 {
 text-indent: 15px;
 }
-#erzwtyoznq .gt_indent_4 {
+#lyabcozslo .gt_indent_4 {
 text-indent: 20px;
 }
-#erzwtyoznq .gt_indent_5 {
+#lyabcozslo .gt_indent_5 {
 text-indent: 25px;
 }
-#erzwtyoznq .katex-display {
+#lyabcozslo .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#erzwtyoznq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lyabcozslo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -4390,20 +4391,20 @@ create headers with <code>header</code>:</p>
 <span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;gt&quot;</span>,</span>
 <span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>  <span class="at">hide =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;estimate_type&quot;</span>)</span>
 <span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a>)</span></code></pre></div>
-<div id="wlnnecvalr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wlnnecvalr table {
+<div id="wagotbmzda" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wagotbmzda table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#wlnnecvalr thead, #wlnnecvalr tbody, #wlnnecvalr tfoot, #wlnnecvalr tr, #wlnnecvalr td, #wlnnecvalr th {
+#wagotbmzda thead, #wagotbmzda tbody, #wagotbmzda tfoot, #wagotbmzda tr, #wagotbmzda td, #wagotbmzda th {
 border-style: none;
 }
-#wlnnecvalr p {
+#wagotbmzda p {
 margin: 0;
 padding: 0;
 }
-#wlnnecvalr .gt_table {
+#wagotbmzda .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4428,11 +4429,11 @@ border-left-style: solid;
 border-left-width: 3px;
 border-left-color: #D9D9D9;
 }
-#wlnnecvalr .gt_caption {
+#wagotbmzda .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#wlnnecvalr .gt_title {
+#wagotbmzda .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4443,7 +4444,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#wlnnecvalr .gt_subtitle {
+#wagotbmzda .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4454,7 +4455,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#wlnnecvalr .gt_heading {
+#wagotbmzda .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4465,12 +4466,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wlnnecvalr .gt_bottom_border {
+#wagotbmzda .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wlnnecvalr .gt_col_headings {
+#wagotbmzda .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4484,7 +4485,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wlnnecvalr .gt_col_heading {
+#wagotbmzda .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4503,7 +4504,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#wlnnecvalr .gt_column_spanner_outer {
+#wagotbmzda .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4514,13 +4515,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#wlnnecvalr .gt_column_spanner_outer:first-child {
+#wagotbmzda .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#wlnnecvalr .gt_column_spanner_outer:last-child {
+#wagotbmzda .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#wlnnecvalr .gt_column_spanner {
+#wagotbmzda .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -4531,10 +4532,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#wlnnecvalr .gt_spanner_row {
+#wagotbmzda .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#wlnnecvalr .gt_group_heading {
+#wagotbmzda .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4559,7 +4560,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#wlnnecvalr .gt_empty_group_heading {
+#wagotbmzda .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -4573,13 +4574,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#wlnnecvalr .gt_from_md > :first-child {
+#wagotbmzda .gt_from_md > :first-child {
 margin-top: 0;
 }
-#wlnnecvalr .gt_from_md > :last-child {
+#wagotbmzda .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#wlnnecvalr .gt_row {
+#wagotbmzda .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4597,7 +4598,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#wlnnecvalr .gt_stub {
+#wagotbmzda .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4609,7 +4610,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wlnnecvalr .gt_stub_row_group {
+#wagotbmzda .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4622,13 +4623,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#wlnnecvalr .gt_row_group_first td {
+#wagotbmzda .gt_row_group_first td {
 border-top-width: 2px;
 }
-#wlnnecvalr .gt_row_group_first th {
+#wagotbmzda .gt_row_group_first th {
 border-top-width: 2px;
 }
-#wlnnecvalr .gt_summary_row {
+#wagotbmzda .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4637,14 +4638,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wlnnecvalr .gt_first_summary_row {
+#wagotbmzda .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#wlnnecvalr .gt_first_summary_row.thick {
+#wagotbmzda .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#wlnnecvalr .gt_last_summary_row {
+#wagotbmzda .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4653,7 +4654,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wlnnecvalr .gt_grand_summary_row {
+#wagotbmzda .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4662,7 +4663,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wlnnecvalr .gt_first_grand_summary_row {
+#wagotbmzda .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4671,7 +4672,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#wlnnecvalr .gt_last_grand_summary_row_top {
+#wagotbmzda .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4680,10 +4681,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#wlnnecvalr .gt_striped {
+#wagotbmzda .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#wlnnecvalr .gt_table_body {
+#wagotbmzda .gt_table_body {
 border-top-style: solid;
 border-top-width: 3px;
 border-top-color: #D9D9D9;
@@ -4691,7 +4692,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wlnnecvalr .gt_footnotes {
+#wagotbmzda .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4704,7 +4705,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wlnnecvalr .gt_footnote {
+#wagotbmzda .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -4712,7 +4713,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wlnnecvalr .gt_sourcenotes {
+#wagotbmzda .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4725,64 +4726,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wlnnecvalr .gt_sourcenote {
+#wagotbmzda .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wlnnecvalr .gt_left {
+#wagotbmzda .gt_left {
 text-align: left;
 }
-#wlnnecvalr .gt_center {
+#wagotbmzda .gt_center {
 text-align: center;
 }
-#wlnnecvalr .gt_right {
+#wagotbmzda .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#wlnnecvalr .gt_font_normal {
+#wagotbmzda .gt_font_normal {
 font-weight: normal;
 }
-#wlnnecvalr .gt_font_bold {
+#wagotbmzda .gt_font_bold {
 font-weight: bold;
 }
-#wlnnecvalr .gt_font_italic {
+#wagotbmzda .gt_font_italic {
 font-style: italic;
 }
-#wlnnecvalr .gt_super {
+#wagotbmzda .gt_super {
 font-size: 65%;
 }
-#wlnnecvalr .gt_footnote_marks {
+#wagotbmzda .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#wlnnecvalr .gt_asterisk {
+#wagotbmzda .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#wlnnecvalr .gt_indent_1 {
+#wagotbmzda .gt_indent_1 {
 text-indent: 5px;
 }
-#wlnnecvalr .gt_indent_2 {
+#wagotbmzda .gt_indent_2 {
 text-indent: 10px;
 }
-#wlnnecvalr .gt_indent_3 {
+#wagotbmzda .gt_indent_3 {
 text-indent: 15px;
 }
-#wlnnecvalr .gt_indent_4 {
+#wagotbmzda .gt_indent_4 {
 text-indent: 20px;
 }
-#wlnnecvalr .gt_indent_5 {
+#wagotbmzda .gt_indent_5 {
 text-indent: 25px;
 }
-#wlnnecvalr .katex-display {
+#wagotbmzda .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#wlnnecvalr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wagotbmzda div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -4938,7 +4939,7 @@ height: 0px !important;
 <span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;flextable&quot;</span>,</span>
 <span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  <span class="at">hide =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;estimate_type&quot;</span>)</span>
 <span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>)</span></code></pre></div>
-<div class="tabwid"><style>.cl-2d9941e4{table-layout:auto;}.cl-2d90cbb8{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2d90cbc2{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2d942204{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2d94220e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2d94400e{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2d944018{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2d944022{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2d944023{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2d944024{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-2d9941e4"><thead><tr style="overflow-wrap:break-word;"><th rowspan="4" class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Estimate name</span></p></th><th colspan="5" class="cl-2d944018"><p class="cl-2d942204"><span class="cl-2d90cbb8">Species</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="3" class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Adelie</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Gentoo</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Chinstrap</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="5" class="cl-2d944018"><p class="cl-2d942204"><span class="cl-2d90cbb8">Island</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Biscoe</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Torgersen</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Dream</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Biscoe</span></p></th><th class="cl-2d94400e"><p class="cl-2d942204"><span class="cl-2d90cbb8">Dream</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2d944022"><p class="cl-2d94220e"><span class="cl-2d90cbb8">female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">Bill length - Bill depth (mm)</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">36.64 - 17.22</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">36.61 - 17.40</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">36.27 - 17.79</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">45.30 - 14.13</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">46.00 - 17.30</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">Flipper length (mm)</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">186.56</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">190.00</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">189.00</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">213.00</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">192.67</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2d944022"><p class="cl-2d94220e"><span class="cl-2d90cbb8">male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">Bill length - Bill depth (mm)</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">40.76 - 19.03</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">40.92 - 18.84</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">40.11 - 18.89</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">48.54 - 15.70</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">51.40 - 19.60</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">Flipper length (mm)</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">192.56</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">193.50</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">195.00</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">222.09</span></p></td><td class="cl-2d944024"><p class="cl-2d94220e"><span class="cl-2d90cbc2">202.78</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-318962e0{table-layout:auto;}.cl-31835896{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-318358aa{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3185bd3e{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-3185bd52{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-3185dc24{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3185dc2e{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3185dc2f{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3185dc38{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3185dc42{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-318962e0"><thead><tr style="overflow-wrap:break-word;"><th rowspan="4" class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Estimate name</span></p></th><th colspan="5" class="cl-3185dc2e"><p class="cl-3185bd3e"><span class="cl-31835896">Species</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="3" class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Adelie</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Gentoo</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Chinstrap</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="5" class="cl-3185dc2e"><p class="cl-3185bd3e"><span class="cl-31835896">Island</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Biscoe</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Torgersen</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Dream</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Biscoe</span></p></th><th class="cl-3185dc24"><p class="cl-3185bd3e"><span class="cl-31835896">Dream</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-3185dc2f"><p class="cl-3185bd52"><span class="cl-31835896">female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">Bill length - Bill depth (mm)</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">36.64 - 17.22</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">36.61 - 17.40</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">36.27 - 17.79</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">45.30 - 14.13</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">46.00 - 17.30</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">Flipper length (mm)</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">186.56</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">190.00</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">189.00</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">213.00</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">192.67</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-3185dc2f"><p class="cl-3185bd52"><span class="cl-31835896">male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">Bill length - Bill depth (mm)</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">40.76 - 19.03</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">40.92 - 18.84</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">40.11 - 18.89</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">48.54 - 15.70</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">51.40 - 19.60</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">Flipper length (mm)</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">192.56</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">193.50</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">195.00</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">222.09</span></p></td><td class="cl-3185dc42"><p class="cl-3185bd52"><span class="cl-318358aa">202.78</span></p></td></tr></tbody></table></div>
 <p>We can also have a similar interactive table using
 <code>datatable</code>:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">visTable</span>(</span>
@@ -4952,8 +4953,8 @@ height: 0px !important;
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;datatable&quot;</span>,</span>
 <span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="at">hide =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;estimate_type&quot;</span>)</span>
 <span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>)</span></code></pre></div>
-<div class="datatables html-widget html-fill-item" id="htmlwidget-df954c00aad74c69b1a7" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-df954c00aad74c69b1a7">{"x":{"filter":"bottom","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;female&quot;,&quot;male&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","class":"display","extensions":["FixedColumns","FixedHeader","Responsive","RowGroup","Scroller"],"data":[["female","female","male","male"],["Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)"],["36.64 - 17.22","186.56","40.76 - 19.03","192.56"],["36.61 - 17.40","190.00","40.92 - 18.84","193.50"],["36.27 - 17.79","189.00","40.11 - 18.89","195.00"],["45.30 - 14.13","213.00","48.54 - 15.70","222.09"],["46.00 - 17.30","192.67","51.40 - 19.60","202.78"]],"container":"<table class='display'>\n<thead>\n<tr><th rowspan='4' style='text-align:center;'>Sex<\/th><th rowspan='4' style='text-align:center;'>Estimate name<\/th><th colspan='5' style='text-align:center;'>Species<\/th><\/tr>\n<tr><th colspan='3' style='text-align:center;'>Adelie<\/th><th style='text-align:center;'>Gentoo<\/th><th style='text-align:center;'>Chinstrap<\/th><\/tr>\n<tr><th colspan='5' style='text-align:center;'>Island<\/th><\/tr>\n<tr><th style='text-align:center;'>Biscoe<\/th><th style='text-align:center;'>Torgersen<\/th><th style='text-align:center;'>Dream<\/th><th style='text-align:center;'>Biscoe<\/th><th style='text-align:center;'>Dream<\/th><\/tr>\n<\/thead>\n<\/table>","options":{"scrollX":true,"scrollY":400,"scrollCollapse":true,"pageLength":10,"lengthMenu":[5,10,20,50,100],"searchHighlight":true,"scroller":true,"deferRender":true,"fixedColumns":{"leftColumns":0,"rightColumns":0},"fixedHeader":true,"rowGroup":{"dataSrc":0},"columnDefs":[{"name":"Sex","targets":0},{"name":"Estimate name","targets":1},{"name":"Species\nAdelie\nIsland\nBiscoe","targets":2},{"name":"Species\nAdelie\nIsland\nTorgersen","targets":3},{"name":"Species\nAdelie\nIsland\nDream","targets":4},{"name":"Species\nGentoo\nIsland\nBiscoe","targets":5},{"name":"Species\nChinstrap\nIsland\nDream","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"responsive":true}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-07fe3f2fb40d40e9ba46" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-07fe3f2fb40d40e9ba46">{"x":{"filter":"bottom","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;female&quot;,&quot;male&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","class":"display","extensions":["FixedColumns","FixedHeader","Responsive","RowGroup","Scroller"],"data":[["female","female","male","male"],["Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)"],["36.64 - 17.22","186.56","40.76 - 19.03","192.56"],["36.61 - 17.40","190.00","40.92 - 18.84","193.50"],["36.27 - 17.79","189.00","40.11 - 18.89","195.00"],["45.30 - 14.13","213.00","48.54 - 15.70","222.09"],["46.00 - 17.30","192.67","51.40 - 19.60","202.78"]],"container":"<table class='display'>\n<thead>\n<tr><th rowspan='4' style='text-align:center;'>Sex<\/th><th rowspan='4' style='text-align:center;'>Estimate name<\/th><th colspan='5' style='text-align:center;'>Species<\/th><\/tr>\n<tr><th colspan='3' style='text-align:center;'>Adelie<\/th><th style='text-align:center;'>Gentoo<\/th><th style='text-align:center;'>Chinstrap<\/th><\/tr>\n<tr><th colspan='5' style='text-align:center;'>Island<\/th><\/tr>\n<tr><th style='text-align:center;'>Biscoe<\/th><th style='text-align:center;'>Torgersen<\/th><th style='text-align:center;'>Dream<\/th><th style='text-align:center;'>Biscoe<\/th><th style='text-align:center;'>Dream<\/th><\/tr>\n<\/thead>\n<\/table>","options":{"scrollX":true,"scrollY":400,"scrollCollapse":true,"pageLength":10,"lengthMenu":[5,10,20,50,100],"searchHighlight":true,"scroller":true,"deferRender":true,"fixedColumns":{"leftColumns":0,"rightColumns":0},"fixedHeader":true,"rowGroup":{"dataSrc":0},"columnDefs":[{"name":"Sex","targets":0},{"name":"Estimate name","targets":1},{"name":"Species\nAdelie\nIsland\nBiscoe","targets":2},{"name":"Species\nAdelie\nIsland\nTorgersen","targets":3},{"name":"Species\nAdelie\nIsland\nDream","targets":4},{"name":"Species\nGentoo\nIsland\nBiscoe","targets":5},{"name":"Species\nChinstrap\nIsland\nDream","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"responsive":true}},"evals":[],"jsHooks":[]}</script>
 <p>Nevertheless, <code>reactable</code> currently only supports one
 level headers. Thereby to use this type we have to reduce to one header.
 Instead of having a two-level header, we can group by two columns:</p>
@@ -4968,8 +4969,8 @@ Instead of having a two-level header, we can group by two columns:</p>
 <span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;reactable&quot;</span>,</span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="at">hide =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;estimate_type&quot;</span>)</span>
 <span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>)</span></code></pre></div>
-<div class="reactable html-widget html-fill-item" id="htmlwidget-1e268dd3395a68cab819" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1e268dd3395a68cab819">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Species; Sex":["Adelie; female","Adelie; female","Adelie; male","Adelie; male","Gentoo; female","Gentoo; female","Gentoo; male","Gentoo; male","Chinstrap; female","Chinstrap; female","Chinstrap; male","Chinstrap; male"],"Estimate name":["Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)"],"Biscoe":["36.64 - 17.22","186.56","40.76 - 19.03","192.56","45.30 - 14.13","213.00","48.54 - 15.70","222.09",null,null,null,null],"Torgersen":["36.61 - 17.40","190.00","40.92 - 18.84","193.50",null,null,null,null,null,null,null,null],"Dream":["36.27 - 17.79","189.00","40.11 - 18.89","195.00",null,null,null,null,"46.00 - 17.30","192.67","51.40 - 19.60","202.78"]},"columns":[{"id":"Species; Sex","name":"Species; Sex","type":"factor","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Estimate name","name":"Estimate name","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Biscoe","name":"Biscoe","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Torgersen","name":"Torgersen","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Dream","name":"Dream","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}}],"columnGroups":[{"headerStyle":{"textAlign":"center"},"name":"Island","columns":["Biscoe","Torgersen","Dream"]}],"groupBy":["Species; Sex"],"searchable":true,"defaultPageSize":10,"showPageSizeOptions":true,"defaultExpanded":true,"highlight":true,"striped":true,"dataKey":"e9efa276f0863c1d295071471d4b4318"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-101c36aafad6599b85ff" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-101c36aafad6599b85ff">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Species; Sex":["Adelie; female","Adelie; female","Adelie; male","Adelie; male","Gentoo; female","Gentoo; female","Gentoo; male","Gentoo; male","Chinstrap; female","Chinstrap; female","Chinstrap; male","Chinstrap; male"],"Estimate name":["Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)","Bill length - Bill depth (mm)","Flipper length (mm)"],"Biscoe":["36.64 - 17.22","186.56","40.76 - 19.03","192.56","45.30 - 14.13","213.00","48.54 - 15.70","222.09",null,null,null,null],"Torgersen":["36.61 - 17.40","190.00","40.92 - 18.84","193.50",null,null,null,null,null,null,null,null],"Dream":["36.27 - 17.79","189.00","40.11 - 18.89","195.00",null,null,null,null,"46.00 - 17.30","192.67","51.40 - 19.60","202.78"]},"columns":[{"id":"Species; Sex","name":"Species; Sex","type":"factor","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Estimate name","name":"Estimate name","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Biscoe","name":"Biscoe","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Torgersen","name":"Torgersen","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}},{"id":"Dream","name":"Dream","type":"character","sortable":true,"resizable":true,"filterable":true,"headerStyle":{"textAlign":"center"}}],"columnGroups":[{"headerStyle":{"textAlign":"center"},"name":"Island","columns":["Biscoe","Torgersen","Dream"]}],"groupBy":["Species; Sex"],"searchable":true,"defaultPageSize":10,"showPageSizeOptions":true,"defaultExpanded":true,"highlight":true,"striped":true,"dataKey":"e9efa276f0863c1d295071471d4b4318"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="visomoptable-specialized-for-summarised_result" class="section level2">
 <h2><code>visOmopTable()</code> — specialized for
@@ -5010,7 +5011,7 @@ via the <code>showMinCellCount</code> argument.</li>
 <span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>  <span class="at">settingsColumn =</span> <span class="st">&quot;package_name&quot;</span>,</span>
 <span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;flextable&quot;</span></span>
 <span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>)</span></code></pre></div>
-<div class="tabwid"><style>.cl-2e461c98{table-layout:auto;}.cl-2e3c6c98{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2e3c6ca2{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2e4094da{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2e4094e4{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2e40b050{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e40b051{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e40b05a{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e40b05b{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e40b05c{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(255, 255, 255, 0.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e40b05d{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-2e461c98"><thead><tr style="overflow-wrap:break-word;"><th rowspan="4" class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">CDM name</span></p></th><th rowspan="4" class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">Variable name</span></p></th><th rowspan="4" class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">Variable level</span></p></th><th rowspan="4" class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">Estimate name</span></p></th><th colspan="2" class="cl-2e40b051"><p class="cl-2e4094da"><span class="cl-2e3c6c98">Package name</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="2" class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">visOmopResults</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="2" class="cl-2e40b051"><p class="cl-2e4094da"><span class="cl-2e3c6c98">Age group</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">&lt;40</span></p></th><th class="cl-2e40b050"><p class="cl-2e4094da"><span class="cl-2e3c6c98">&gt;=40</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2e40b05a"><p class="cl-2e4094e4"><span class="cl-2e3c6c98">cohort1; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">mock</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">number subjects</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">3,721,239</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">5,728,534</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">age</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Mean (SD)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">77.74 (1.08)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">93.47 (7.24)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Medications</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Amoxiciline</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">9,947 (33.38%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">31,627 (47.64%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Ibuprofen</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">5,893 (59.88%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">64,229 (97.62%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2e40b05a"><p class="cl-2e4094e4"><span class="cl-2e3c6c98">cohort1; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">mock</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">number subjects</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">9,082,078</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">2,016,819</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">age</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Mean (SD)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">21.21 (4.11)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">65.17 (8.21)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Medications</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Amoxiciline</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">51,863 (89.22%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">66,201 (86.43%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Ibuprofen</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">87,627 (73.18%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">77,891 (35.67%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2e40b05a"><p class="cl-2e4094e4"><span class="cl-2e3c6c98">cohort2; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">mock</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">number subjects</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">2,059,746</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">1,765,568</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">age</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Mean (SD)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">86.97 (0.23)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">34.03 (4.77)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Medications</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Amoxiciline</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">65,087 (40.00%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">25,802 (32.54%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Ibuprofen</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">65,472 (44.63%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">35,320 (64.01%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-2e40b05a"><p class="cl-2e4094e4"><span class="cl-2e3c6c98">cohort2; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">mock</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">number subjects</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">6,870,228</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">3,841,037</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">age</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">–</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Mean (SD)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">48.21 (7.32)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">59.96 (6.93)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05c"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Medications</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Amoxiciline</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">47,855 (75.71%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">76,631 (20.27%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2"></span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">Ibuprofen</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">N (%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">27,026 (99.18%)</span></p></td><td class="cl-2e40b05d"><p class="cl-2e4094e4"><span class="cl-2e3c6ca2">99,268 (49.56%)</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-32a7ed72{table-layout:auto;}.cl-32a141c0{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-32a141d4{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-32a37f80{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-32a37f94{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-32a39b50{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-32a39b5a{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-32a39b64{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-32a39b65{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-32a39b66{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(255, 255, 255, 0.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-32a39b6e{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-32a7ed72"><thead><tr style="overflow-wrap:break-word;"><th rowspan="4" class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">CDM name</span></p></th><th rowspan="4" class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">Variable name</span></p></th><th rowspan="4" class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">Variable level</span></p></th><th rowspan="4" class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">Estimate name</span></p></th><th colspan="2" class="cl-32a39b5a"><p class="cl-32a37f80"><span class="cl-32a141c0">Package name</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="2" class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">visOmopResults</span></p></th></tr><tr style="overflow-wrap:break-word;"><th colspan="2" class="cl-32a39b5a"><p class="cl-32a37f80"><span class="cl-32a141c0">Age group</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">&lt;40</span></p></th><th class="cl-32a39b50"><p class="cl-32a37f80"><span class="cl-32a141c0">&gt;=40</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-32a39b64"><p class="cl-32a37f94"><span class="cl-32a141c0">cohort1; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">mock</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">number subjects</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">3,721,239</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">5,728,534</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">age</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Mean (SD)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">77.74 (1.08)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">93.47 (7.24)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">Medications</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Amoxiciline</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">9,947 (33.38%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">31,627 (47.64%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Ibuprofen</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">5,893 (59.88%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">64,229 (97.62%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-32a39b64"><p class="cl-32a37f94"><span class="cl-32a141c0">cohort1; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">mock</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">number subjects</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">9,082,078</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">2,016,819</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">age</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Mean (SD)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">21.21 (4.11)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">65.17 (8.21)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">Medications</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Amoxiciline</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">51,863 (89.22%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">66,201 (86.43%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Ibuprofen</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">87,627 (73.18%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">77,891 (35.67%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-32a39b64"><p class="cl-32a37f94"><span class="cl-32a141c0">cohort2; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">mock</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">number subjects</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">2,059,746</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">1,765,568</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">age</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Mean (SD)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">86.97 (0.23)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">34.03 (4.77)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">Medications</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Amoxiciline</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">65,087 (40.00%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">25,802 (32.54%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Ibuprofen</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">65,472 (44.63%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">35,320 (64.01%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-32a39b64"><p class="cl-32a37f94"><span class="cl-32a141c0">cohort2; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">mock</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">number subjects</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">6,870,228</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">3,841,037</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">age</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">–</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Mean (SD)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">48.21 (7.32)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">59.96 (6.93)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b66"><p class="cl-32a37f94"><span class="cl-32a141d4">Medications</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Amoxiciline</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">47,855 (75.71%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">76,631 (20.27%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4"></span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">Ibuprofen</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">N (%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">27,026 (99.18%)</span></p></td><td class="cl-32a39b6e"><p class="cl-32a37f94"><span class="cl-32a141d4">99,268 (49.56%)</span></p></td></tr></tbody></table></div>
 <p>Example showing suppressed values (treat input with
 <code>suppress()</code> then display them with
 <code>showMinCellCount = TRUE</code>):</p>
@@ -5028,7 +5029,7 @@ via the <code>showMinCellCount</code> argument.</li>
 <span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>    <span class="at">showMinCellCount =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;flextable&quot;</span></span>
 <span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>  )</span></code></pre></div>
-<div class="tabwid"><style>.cl-2e9ed702{table-layout:auto;}.cl-2e95c96e{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2e95c978{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2e99099e{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2e9909a8{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-2e993072{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e99307c{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e99307d{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e993086{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e993087{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2e993088{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(255, 255, 255, 0.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-2e9ed702"><thead><tr style="overflow-wrap:break-word;"><th rowspan="2" class="cl-2e993072"><p class="cl-2e99099e"><span class="cl-2e95c96e">Variable name</span></p></th><th rowspan="2" class="cl-2e993072"><p class="cl-2e99099e"><span class="cl-2e95c96e">Variable level</span></p></th><th rowspan="2" class="cl-2e993072"><p class="cl-2e99099e"><span class="cl-2e95c96e">Estimate name</span></p></th><th colspan="2" class="cl-2e99307c"><p class="cl-2e99099e"><span class="cl-2e95c96e">Cohort name</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-2e993072"><p class="cl-2e99099e"><span class="cl-2e95c96e">cohort1</span></p></th><th class="cl-2e993072"><p class="cl-2e99099e"><span class="cl-2e95c96e">cohort2</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-2e99307d"><p class="cl-2e9909a8"><span class="cl-2e95c96e">&lt;40; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">number subjects</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">3,721,239</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">2,059,746</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">age</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Mean (SD)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">77.74 (1.08)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">86.97 (0.23)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993088"><p class="cl-2e9909a8"><span class="cl-2e95c978">Medications</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Amoxiciline</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978"></span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Ibuprofen</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-2e99307d"><p class="cl-2e9909a8"><span class="cl-2e95c96e">&gt;=40; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">number subjects</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">5,728,534</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">1,765,568</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">age</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Mean (SD)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">93.47 (7.24)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">34.03 (4.77)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993088"><p class="cl-2e9909a8"><span class="cl-2e95c978">Medications</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Amoxiciline</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978"></span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Ibuprofen</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-2e99307d"><p class="cl-2e9909a8"><span class="cl-2e95c96e">&lt;40; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">number subjects</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">9,082,078</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">6,870,228</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">age</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Mean (SD)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">21.21 (4.11)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">48.21 (7.32)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993088"><p class="cl-2e9909a8"><span class="cl-2e95c978">Medications</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Amoxiciline</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978"></span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Ibuprofen</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-2e99307d"><p class="cl-2e9909a8"><span class="cl-2e95c96e">&gt;=40; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">number subjects</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">2,016,819</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">3,841,037</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">age</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">–</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Mean (SD)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">65.17 (8.21)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">59.96 (6.93)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993088"><p class="cl-2e9909a8"><span class="cl-2e95c978">Medications</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Amoxiciline</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978"></span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">Ibuprofen</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">N (%)</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td><td class="cl-2e993087"><p class="cl-2e9909a8"><span class="cl-2e95c978">&lt;1,000,000</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-3324863e{table-layout:auto;}.cl-331e2992{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-331e299c{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-33212516{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-33212520{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-33214384{background-color:rgba(225, 225, 225, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3321438e{background-color:rgba(217, 217, 217, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3321438f{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-33214398{background-color:rgba(233, 233, 233, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-332143a2{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(200, 200, 200, 1.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-332143a3{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(255, 255, 255, 0.00);border-top: 1pt solid rgba(200, 200, 200, 1.00);border-left: 1pt solid rgba(200, 200, 200, 1.00);border-right: 1pt solid rgba(200, 200, 200, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3324863e"><thead><tr style="overflow-wrap:break-word;"><th rowspan="2" class="cl-33214384"><p class="cl-33212516"><span class="cl-331e2992">Variable name</span></p></th><th rowspan="2" class="cl-33214384"><p class="cl-33212516"><span class="cl-331e2992">Variable level</span></p></th><th rowspan="2" class="cl-33214384"><p class="cl-33212516"><span class="cl-331e2992">Estimate name</span></p></th><th colspan="2" class="cl-3321438e"><p class="cl-33212516"><span class="cl-331e2992">Cohort name</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-33214384"><p class="cl-33212516"><span class="cl-331e2992">cohort1</span></p></th><th class="cl-33214384"><p class="cl-33212516"><span class="cl-331e2992">cohort2</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-3321438f"><p class="cl-33212520"><span class="cl-331e2992">&lt;40; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">number subjects</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">3,721,239</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">2,059,746</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">age</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Mean (SD)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">77.74 (1.08)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">86.97 (0.23)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a3"><p class="cl-33212520"><span class="cl-331e299c">Medications</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Amoxiciline</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c"></span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Ibuprofen</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-3321438f"><p class="cl-33212520"><span class="cl-331e2992">&gt;=40; Male</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">number subjects</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">5,728,534</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">1,765,568</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">age</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Mean (SD)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">93.47 (7.24)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">34.03 (4.77)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a3"><p class="cl-33212520"><span class="cl-331e299c">Medications</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Amoxiciline</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c"></span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Ibuprofen</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-3321438f"><p class="cl-33212520"><span class="cl-331e2992">&lt;40; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">number subjects</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">9,082,078</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">6,870,228</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">age</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Mean (SD)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">21.21 (4.11)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">48.21 (7.32)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a3"><p class="cl-33212520"><span class="cl-331e299c">Medications</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Amoxiciline</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c"></span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Ibuprofen</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="5" class="cl-3321438f"><p class="cl-33212520"><span class="cl-331e2992">&gt;=40; Female</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">number subjects</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">2,016,819</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">3,841,037</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">age</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">–</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Mean (SD)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">65.17 (8.21)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">59.96 (6.93)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a3"><p class="cl-33212520"><span class="cl-331e299c">Medications</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Amoxiciline</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c"></span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">Ibuprofen</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">N (%)</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td><td class="cl-332143a2"><p class="cl-33212520"><span class="cl-331e299c">&lt;1,000,000</span></p></td></tr></tbody></table></div>
 </div>
 <div id="using-.options" class="section level2">
 <h2>Using <code>.options</code></h2>
@@ -5197,20 +5198,20 @@ or <code>reactable</code> object. It accepts options such as
 <span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a>    <span class="at">groupOrder =</span> <span class="fu">c</span>(<span class="st">&quot;cohort2&quot;</span>, <span class="st">&quot;cohort1&quot;</span>),</span>
 <span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a>    <span class="at">merge =</span> <span class="st">&quot;variable_name&quot;</span></span>
 <span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="ykuyaezdzb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ykuyaezdzb table {
+<div id="uzyishdlop" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uzyishdlop table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#ykuyaezdzb thead, #ykuyaezdzb tbody, #ykuyaezdzb tfoot, #ykuyaezdzb tr, #ykuyaezdzb td, #ykuyaezdzb th {
+#uzyishdlop thead, #uzyishdlop tbody, #uzyishdlop tfoot, #uzyishdlop tr, #uzyishdlop td, #uzyishdlop th {
 border-style: none;
 }
-#ykuyaezdzb p {
+#uzyishdlop p {
 margin: 0;
 padding: 0;
 }
-#ykuyaezdzb .gt_table {
+#uzyishdlop .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -5235,11 +5236,11 @@ border-left-style: solid;
 border-left-width: 3px;
 border-left-color: #C8C8C8;
 }
-#ykuyaezdzb .gt_caption {
+#uzyishdlop .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#ykuyaezdzb .gt_title {
+#uzyishdlop .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -5250,7 +5251,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#ykuyaezdzb .gt_subtitle {
+#uzyishdlop .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -5261,7 +5262,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#ykuyaezdzb .gt_heading {
+#uzyishdlop .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -5272,12 +5273,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_bottom_border {
+#uzyishdlop .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_col_headings {
+#uzyishdlop .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5291,7 +5292,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_col_heading {
+#uzyishdlop .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5310,7 +5311,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#ykuyaezdzb .gt_column_spanner_outer {
+#uzyishdlop .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5321,13 +5322,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#ykuyaezdzb .gt_column_spanner_outer:first-child {
+#uzyishdlop .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#ykuyaezdzb .gt_column_spanner_outer:last-child {
+#uzyishdlop .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#ykuyaezdzb .gt_column_spanner {
+#uzyishdlop .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -5338,10 +5339,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#ykuyaezdzb .gt_spanner_row {
+#uzyishdlop .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#ykuyaezdzb .gt_group_heading {
+#uzyishdlop .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5366,7 +5367,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#ykuyaezdzb .gt_empty_group_heading {
+#uzyishdlop .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -5380,13 +5381,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#ykuyaezdzb .gt_from_md > :first-child {
+#uzyishdlop .gt_from_md > :first-child {
 margin-top: 0;
 }
-#ykuyaezdzb .gt_from_md > :last-child {
+#uzyishdlop .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#ykuyaezdzb .gt_row {
+#uzyishdlop .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5404,7 +5405,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#ykuyaezdzb .gt_stub {
+#uzyishdlop .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5416,7 +5417,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ykuyaezdzb .gt_stub_row_group {
+#uzyishdlop .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5429,13 +5430,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#ykuyaezdzb .gt_row_group_first td {
+#uzyishdlop .gt_row_group_first td {
 border-top-width: 2px;
 }
-#ykuyaezdzb .gt_row_group_first th {
+#uzyishdlop .gt_row_group_first th {
 border-top-width: 2px;
 }
-#ykuyaezdzb .gt_summary_row {
+#uzyishdlop .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5444,14 +5445,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ykuyaezdzb .gt_first_summary_row {
+#uzyishdlop .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_first_summary_row.thick {
+#uzyishdlop .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#ykuyaezdzb .gt_last_summary_row {
+#uzyishdlop .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5460,7 +5461,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_grand_summary_row {
+#uzyishdlop .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5469,7 +5470,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ykuyaezdzb .gt_first_grand_summary_row {
+#uzyishdlop .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5478,7 +5479,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_last_grand_summary_row_top {
+#uzyishdlop .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5487,10 +5488,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_striped {
+#uzyishdlop .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#ykuyaezdzb .gt_table_body {
+#uzyishdlop .gt_table_body {
 border-top-style: solid;
 border-top-width: 3px;
 border-top-color: #C8C8C8;
@@ -5498,7 +5499,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_footnotes {
+#uzyishdlop .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5511,7 +5512,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_footnote {
+#uzyishdlop .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -5519,7 +5520,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ykuyaezdzb .gt_sourcenotes {
+#uzyishdlop .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5532,64 +5533,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#ykuyaezdzb .gt_sourcenote {
+#uzyishdlop .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ykuyaezdzb .gt_left {
+#uzyishdlop .gt_left {
 text-align: left;
 }
-#ykuyaezdzb .gt_center {
+#uzyishdlop .gt_center {
 text-align: center;
 }
-#ykuyaezdzb .gt_right {
+#uzyishdlop .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#ykuyaezdzb .gt_font_normal {
+#uzyishdlop .gt_font_normal {
 font-weight: normal;
 }
-#ykuyaezdzb .gt_font_bold {
+#uzyishdlop .gt_font_bold {
 font-weight: bold;
 }
-#ykuyaezdzb .gt_font_italic {
+#uzyishdlop .gt_font_italic {
 font-style: italic;
 }
-#ykuyaezdzb .gt_super {
+#uzyishdlop .gt_super {
 font-size: 65%;
 }
-#ykuyaezdzb .gt_footnote_marks {
+#uzyishdlop .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#ykuyaezdzb .gt_asterisk {
+#uzyishdlop .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#ykuyaezdzb .gt_indent_1 {
+#uzyishdlop .gt_indent_1 {
 text-indent: 5px;
 }
-#ykuyaezdzb .gt_indent_2 {
+#uzyishdlop .gt_indent_2 {
 text-indent: 10px;
 }
-#ykuyaezdzb .gt_indent_3 {
+#uzyishdlop .gt_indent_3 {
 text-indent: 15px;
 }
-#ykuyaezdzb .gt_indent_4 {
+#uzyishdlop .gt_indent_4 {
 text-indent: 20px;
 }
-#ykuyaezdzb .gt_indent_5 {
+#uzyishdlop .gt_indent_5 {
 text-indent: 25px;
 }
-#ykuyaezdzb .katex-display {
+#uzyishdlop .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#ykuyaezdzb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uzyishdlop div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>

@@ -447,10 +447,11 @@ formatPlotStyle <- function(x, fontsizeRef = NULL) {
   legendPosition <- x$plot_legend_position
   fontFamily <- x$plot_font_family
   headerTextColour <- x$plot_header_text_color
-  if (x$plot_header_text_bold) {
-    headerTextBold <- "bold"
-  } else {
-    headerTextBold <- NULL
+  headerTextBold <- NULL
+  if (!is.null(x$plot_header_text_bold)) {
+    if (x$plot_header_text_bold) {
+      headerTextBold <- "bold"
+    }
   }
 
   # check font
